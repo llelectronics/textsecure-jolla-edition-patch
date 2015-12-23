@@ -1,7 +1,6 @@
 /**
- * Copyright (C) 2011 Whisper Systems
- * Copyright (C) 2014 Open Whisper Systems
- * 
+ * Copyright (C) 2015 Open Whisper Systems
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -11,15 +10,28 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.thoughtcrime.securesms.sms;
+package org.thoughtcrime.securesms.mms;
 
-public class SmsTransportDetails {
+import java.io.InputStream;
 
-  public static final int SMS_SIZE           = 160;
-  public static final int MULTIPART_SMS_SIZE = 153;
+public class MediaStream {
+  private final InputStream stream;
+  private final String      mimeType;
 
+  public MediaStream(InputStream stream, String mimeType) {
+    this.stream   = stream;
+    this.mimeType = mimeType;
+  }
+
+  public InputStream getStream() {
+    return stream;
+  }
+
+  public String getMimeType() {
+    return mimeType;
+  }
 }

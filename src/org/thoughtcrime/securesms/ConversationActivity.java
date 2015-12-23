@@ -163,6 +163,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
 
   public static final String RECIPIENTS_EXTRA        = "recipients";
   public static final String THREAD_ID_EXTRA         = "thread_id";
+  public static final String IS_ARCHIVED_EXTRA       = "is_archived";
   public static final String TEXT_EXTRA              = "draft_text";
   public static final String DISTRIBUTION_TYPE_EXTRA = "distribution_type";
 
@@ -172,6 +173,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private static final int PICK_CONTACT_INFO = 4;
   private static final int GROUP_EDIT        = 5;
   private static final int TAKE_PHOTO        = 6;
+  private static final int ADD_CONTACT       = 7;
 
   private   MasterSecret          masterSecret;
   protected ComposeText           composeText;
@@ -199,6 +201,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private Recipients recipients;
   private long       threadId;
   private int        distributionType;
+  private boolean    archived;
   private boolean    isSecureText;
   private boolean    isSecureVoice;
   private boolean    isMmsEnabled = true;
@@ -341,6 +344,11 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
         setMedia(attachmentManager.getCaptureUri(), MediaType.IMAGE);
       }
       break;
+    case ADD_CONTACT:
+      recipients = RecipientFactory.getRecipientsForIds(ConversationActivity.this, recipients.getIds(), true);
+      recipients.addListener(this);
+      fragment.reloadList();
+      break;
     }
   }
 
@@ -426,7 +434,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   //////// Event Handlers
 
   private void handleReturnToConversationList() {
-    Intent intent = new Intent(this, ConversationListActivity.class);
+    Intent intent = new Intent(this, (archived ? ConversationListArchiveActivity.class : ConversationListActivity.class));
     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     startActivity(intent);
     finish();
@@ -650,10 +658,14 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   }
 
   private void handleAddToContacts() {
-    final Intent intent = new Intent(Intent.ACTION_INSERT_OR_EDIT);
-    intent.putExtra(ContactsContract.Intents.Insert.PHONE, recipients.getPrimaryRecipient().getNumber());
-    intent.setType(ContactsContract.Contacts.CONTENT_ITEM_TYPE);
-    startActivity(intent);
+    try {
+      final Intent intent = new Intent(Intent.ACTION_INSERT_OR_EDIT);
+      intent.putExtra(ContactsContract.Intents.Insert.PHONE, recipients.getPrimaryRecipient().getNumber());
+      intent.setType(ContactsContract.Contacts.CONTENT_ITEM_TYPE);
+      startActivityForResult(intent, ADD_CONTACT);
+    } catch (ActivityNotFoundException e) {
+      Log.w(TAG, e);
+    }
   }
 
   private void handleAddAttachment() {
@@ -917,6 +929,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     
     recipients       = RecipientFactory.getRecipientsForIds(this, getIntent().getLongArrayExtra(RECIPIENTS_EXTRA), true);
     threadId         = getIntent().getLongExtra(THREAD_ID_EXTRA, -1);
+    archived         = getIntent().getBooleanExtra(IS_ARCHIVED_EXTRA, false);
     distributionType = getIntent().getIntExtra(DISTRIBUTION_TYPE_EXTRA, ThreadDatabase.DistributionTypes.DEFAULT);
 
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
@@ -986,7 +999,7 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     case AttachmentTypeSelectorAdapter.ADD_CONTACT_INFO:
       AttachmentManager.selectContactInfo(this, PICK_CONTACT_INFO); break;
     case AttachmentTypeSelectorAdapter.TAKE_PHOTO:
-      attachmentManager.capturePhoto(this, recipients, TAKE_PHOTO); break;
+      attachmentManager.capturePhoto(this, TAKE_PHOTO); break;
     }
   }
 

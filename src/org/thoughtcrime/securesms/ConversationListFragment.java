@@ -20,7 +20,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -44,7 +43,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.text.TextUtils;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -53,10 +51,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
-
 import org.thoughtcrime.securesms.ConversationListAdapter.ItemClickListener;
 import org.thoughtcrime.securesms.components.reminder.DefaultSmsReminder;
 import org.thoughtcrime.securesms.components.reminder.ExpiredBuildReminder;
+import org.thoughtcrime.securesms.components.reminder.OutdatedBuildReminder;
 import org.thoughtcrime.securesms.components.reminder.PushRegistrationReminder;
 import org.thoughtcrime.securesms.components.reminder.Reminder;
 import org.thoughtcrime.securesms.components.reminder.ReminderView;
@@ -169,8 +167,10 @@ public class ConversationListFragment extends Fragment
     new AsyncTask<Context, Void, Optional<? extends Reminder>>() {
       @Override protected Optional<? extends Reminder> doInBackground(Context... params) {
         final Context context = params[0];
-        if (ExpiredBuildReminder.isEligible(context)) {
+        if (ExpiredBuildReminder.isEligible()) {
           return Optional.of(new ExpiredBuildReminder(context));
+        } else if (OutdatedBuildReminder.isEligible()) {
+          return Optional.of(new OutdatedBuildReminder(context));
         } else if (DefaultSmsReminder.isEligible(context)) {
           return Optional.of(new DefaultSmsReminder(context));
         } else if (Util.isDefaultSmsProvider(context) && SystemSmsImportReminder.isEligible(context)) {
@@ -204,7 +204,7 @@ public class ConversationListFragment extends Fragment
     String snackBarTitle;
 
     if (archive) snackBarTitle = getString(R.string.ConversationListFragment_moved_conversations_to_inbox);
-    else         snackBarTitle = getString(R.string.ConversationListFragment_archived_conversations);
+    else         snackBarTitle = getString(R.string.ConversationListFragment_conversations_archived);
 
     new SnackbarAsyncTask<Void>(getView(), snackBarTitle,
                                 getString(R.string.ConversationListFragment_undo),
@@ -264,7 +264,7 @@ public class ConversationListFragment extends Fragment
             protected void onPreExecute() {
               dialog = ProgressDialog.show(getActivity(),
                                            getActivity().getString(R.string.ConversationListFragment_deleting),
-                                           getActivity().getString(R.string.ConversationListFragment_deleting_selected_threads),
+                                           getActivity().getString(R.string.ConversationListFragment_deleting_selected_conversations),
                                            true, false);
             }
 
@@ -433,14 +433,15 @@ public class ConversationListFragment extends Fragment
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-      final long threadId = ((ConversationListItem)viewHolder.itemView).getThreadId();
+      final long    threadId = ((ConversationListItem)viewHolder.itemView).getThreadId();
+      final boolean read     = ((ConversationListItem)viewHolder.itemView).getRead();
 
       if (archive) {
         new SnackbarAsyncTask<Long>(getView(),
                                     getString(R.string.ConversationListFragment_moved_conversation_to_inbox),
                                     getString(R.string.ConversationListFragment_undo),
                                     getResources().getColor(R.color.amber_500),
-                                    Snackbar.LENGTH_SHORT, false)
+                                    Snackbar.LENGTH_LONG, false)
         {
           @Override
           protected void executeAction(@Nullable Long parameter) {
@@ -454,19 +455,29 @@ public class ConversationListFragment extends Fragment
         }.execute(threadId);
       } else {
         new SnackbarAsyncTask<Long>(getView(),
-                                    getString(R.string.ConversationListFragment_archived_conversation),
+                                    getString(R.string.ConversationListFragment_conversation_archived),
                                     getString(R.string.ConversationListFragment_undo),
                                     getResources().getColor(R.color.amber_500),
-                                    Snackbar.LENGTH_SHORT, false)
+                                    Snackbar.LENGTH_LONG, false)
         {
           @Override
           protected void executeAction(@Nullable Long parameter) {
             DatabaseFactory.getThreadDatabase(getActivity()).archiveConversation(threadId);
+
+            if (!read) {
+              DatabaseFactory.getThreadDatabase(getActivity()).setRead(threadId);
+              MessageNotifier.updateNotification(getActivity(), masterSecret);
+            }
           }
 
           @Override
           protected void reverseAction(@Nullable Long parameter) {
             DatabaseFactory.getThreadDatabase(getActivity()).unarchiveConversation(threadId);
+
+            if (!read) {
+              DatabaseFactory.getThreadDatabase(getActivity()).setUnread(threadId);
+              MessageNotifier.updateNotification(getActivity(), masterSecret);
+            }
           }
         }.execute(threadId);
       }

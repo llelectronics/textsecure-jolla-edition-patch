@@ -32,13 +32,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import org.thoughtcrime.securesms.MediaPreviewActivity;
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.components.AudioView;
 import org.thoughtcrime.securesms.components.RemovableMediaView;
 import org.thoughtcrime.securesms.components.ThumbnailView;
 import org.thoughtcrime.securesms.crypto.MasterSecret;
 import org.thoughtcrime.securesms.providers.PersistentBlobProvider;
-import org.thoughtcrime.securesms.recipients.Recipients;
 import org.thoughtcrime.securesms.util.MediaUtil;
 import org.thoughtcrime.securesms.util.ViewUtil;
 import org.thoughtcrime.securesms.util.concurrent.ListenableFuture.Listener;
@@ -76,6 +76,7 @@ public class AttachmentManager {
     this.attachmentListener = listener;
 
     removableMediaView.setRemoveClickListener(new RemoveButtonListener());
+    thumbnail.setOnClickListener(new ThumbnailClickListener());
   }
 
   public void clear() {
@@ -126,8 +127,8 @@ public class AttachmentManager {
   }
 
   private void setSlide(@NonNull Slide slide) {
-    if (getSlideUri() != null)                              cleanup(getSlideUri());
-    if (captureUri != null && slide.getUri() != captureUri) cleanup(captureUri);
+    if (getSlideUri() != null)                                    cleanup(getSlideUri());
+    if (captureUri != null && !captureUri.equals(slide.getUri())) cleanup(captureUri);
 
     this.captureUri = null;
     this.slide      = Optional.of(slide);
@@ -225,12 +226,12 @@ public class AttachmentManager {
     return captureUri;
   }
 
-  public void capturePhoto(Activity activity, Recipients recipients, int requestCode) {
+  public void capturePhoto(Activity activity, int requestCode) {
     try {
       Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
       if (captureIntent.resolveActivity(activity.getPackageManager()) != null) {
         if (captureUri == null) {
-          captureUri = PersistentBlobProvider.getInstance(context).createForExternal(recipients);
+          captureUri = PersistentBlobProvider.getInstance(context).createForExternal();
         }
         Log.w(TAG, "captureUri path is " + captureUri.getPath());
         captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, captureUri);
@@ -272,6 +273,23 @@ public class AttachmentManager {
    return slide == null                                                        ||
           constraints.isSatisfied(context, masterSecret, slide.asAttachment()) ||
           constraints.canResize(slide.asAttachment());
+  }
+
+  private void previewImageDraft(final @NonNull Slide slide) {
+    if (MediaPreviewActivity.isContentTypeSupported(slide.getContentType()) && slide.getThumbnailUri() != null) {
+      Intent intent = new Intent(context, MediaPreviewActivity.class);
+      intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+      intent.setDataAndType(slide.getUri(), slide.getContentType());
+
+      context.startActivity(intent);
+    }
+  }
+
+  private class ThumbnailClickListener implements View.OnClickListener {
+    @Override
+    public void onClick(View v) {
+      if (slide.isPresent()) previewImageDraft(slide.get());
+    }
   }
 
   private class RemoveButtonListener implements View.OnClickListener {

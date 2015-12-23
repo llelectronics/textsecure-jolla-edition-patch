@@ -152,6 +152,10 @@ public class ConversationFragment extends Fragment
     }
   }
 
+  public void reloadList() {
+    getLoaderManager().restartLoader(0, null, this);
+  }
+
   private void initializeResources() {
     this.recipients = RecipientFactory.getRecipientsForIds(getActivity(), getActivity().getIntent().getLongArrayExtra("recipients"), true);
     this.threadId   = this.getActivity().getIntent().getLongExtra("thread_id", -1);
@@ -301,6 +305,7 @@ public class ConversationFragment extends Fragment
     Intent intent = new Intent(getActivity(), MessageDetailsActivity.class);
     intent.putExtra(MessageDetailsActivity.MASTER_SECRET_EXTRA, masterSecret);
     intent.putExtra(MessageDetailsActivity.MESSAGE_ID_EXTRA, message.getId());
+    intent.putExtra(MessageDetailsActivity.THREAD_ID_EXTRA, threadId);
     intent.putExtra(MessageDetailsActivity.TYPE_EXTRA, message.isMms() ? MmsSmsDatabase.MMS_TRANSPORT : MmsSmsDatabase.SMS_TRANSPORT);
     intent.putExtra(MessageDetailsActivity.RECIPIENTS_IDS_EXTRA, recipients.getIds());
     startActivity(intent);

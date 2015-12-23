@@ -8,9 +8,7 @@
   <!--ApplicationPreferencesActivity-->
   <string name="ApplicationPreferencesActivity_currently_s">Trenutno: %s</string>
   <string name="ApplicationPreferenceActivity_you_havent_set_a_passphrase_yet">Još niste postavili lozinku!</string>
-  <string name="ApplicationPreferencesActivity_messages_per_conversation">%s poruka po razgovoru</string>
   <string name="ApplicationPreferencesActivity_delete_all_old_messages_now">Obriši sve stare poruke?</string>
-  <string name="ApplicationPreferencesActivity_are_you_sure_you_would_like_to_immediately_trim_all_conversation_threads_to_the_s_most_recent_messages">Jeste li sigurni da želite skratiti sve razgovore na %s najnovijih poruka?</string>
   <string name="ApplicationPreferencesActivity_delete">Obriši</string>
   <string name="ApplicationPreferencesActivity_disable_passphrase">Onemogući lozinku?</string>
   <string name="ApplicationPreferencesActivity_disable_lock_screen">
@@ -31,7 +29,6 @@ Onemogući zaključani ekran za poruke?</string>
   <string name="ApplicationPreferencesActivity_Off">Isključeno</string>
   <string name="ApplicationPreferencesActivity_sms_mms_summary">SMS %1$s, MMS %2$s</string>
   <!--AppProtectionPreferenceFragment-->
-  <string name="AppProtectionPreferenceFragment_minutes">%d minuta</string>
   <!--DraftDatabase-->
   <string name="DraftDatabase_Draft_image_snippet">(slika)</string>
   <string name="DraftDatabase_Draft_audio_snippet">(zvuk)</string>
@@ -93,8 +90,6 @@ ovaj kontakt.</string>
   <string name="ConversationActivity_group_members">Članovi grupe</string>
   <string name="ConversationActivity_group_conversation">Grupni razgovor</string>
   <string name="ConversationActivity_unnamed_group">Neimenovana grupa</string>
-  <string name="ConversationActivity_d_recipients_in_group">%d članova</string>
-  <string name="ConversationActivity_d_recipients_in_group_singular">1 član</string>
   <string name="ConversationActivity_saved_draft">Spremljena skica</string>
   <string name="ConversationActivity_invalid_recipient">Naispravan primatelj!</string>
   <string name="ConversationActivity_calls_not_supported">Pozivi nisu podržani</string>
@@ -121,6 +116,11 @@ ovaj kontakt.</string>
   <string name="ConversationFragment_message_details">Detalji poruke</string>
   <string name="ConversationFragment_transport_s_sent_received_s">Transport: %1$s\nPoslano/Primljeno: %2$s</string>
   <string name="ConversationFragment_sender_s_transport_s_sent_s_received_s">Pošiljatelj: %1$s\nTransport: %2$s\nPoslano: %3$s\nPrimljeno: %4$s</string>
+  <plurals name="ConversationFragment_delete_selected_messages">
+    <item quantity="one">Obriši odabrane poruke?</item>
+    <item quantity="few">Obriši odabrane poruke?</item>
+    <item quantity="other">Obriši odabrane poruke?</item>
+  </plurals>
   <string name="ConversationFragment_save_to_sd_card">Spremi na disk?</string>
   <string name="ConversationFragment_saving_this_media_to_storage_warning">Spremanje ovog medija na disk će omogućiti pristup mediju iz drugih aplikacija na vašem uređaju.\n\nNastavi?</string>
   <string name="ConversationFragment_error_while_saving_attachment_to_sd_card">Greška prilikom spremanja privitka na disk!</string>
@@ -138,10 +138,12 @@ ovaj kontakt.</string>
   <string name="ConversationListActivity_search">Traži...</string>
   <!--ConversationListFragment-->
   <string name="ConversationListFragment_deleting">Brisanje</string>
-  <string name="ConversationListFragment_deleting_selected_threads">Brisanje odabranih tema...</string>
+  <string name="ConversationListFragment_deleting_selected_conversations">Brisanje odabranih razgovora...</string>
+  <string name="ConversationListFragment_undo">VRATI</string>
   <!--ConversationListItem-->
   <string name="ConversationListItem_key_exchange_message">Poruka za razmjenu ključa...</string>
   <!--ConversationListItemAction-->
+  <string name="ConversationListItemAction_archived_conversations_d">Arhivirani razgovori (%d)</string>
   <!--CustomDefaultPreference-->
   <string name="CustomDefaultPreference_using_custom">Koristeći prilagođeno: %s</string>
   <string name="CustomDefaultPreference_using_default">Koristeći zadano: %s</string>
@@ -161,6 +163,7 @@ ovaj kontakt.</string>
   <string name="DeviceListItem_unnamed_device">Neimenovani uređaj</string>
   <string name="DeviceListItem_linked_s">Povezan %s</string>
   <string name="DeviceListItem_last_active_s">Zadnje aktivno %s</string>
+  <string name="DeviceListItem_today">Danas</string>
   <!--ShareActivity-->
   <string name="ShareActivity_share_with">Podijeli s</string>
   <!--ExperienceUpgradeActivity-->
@@ -171,17 +174,24 @@ ovaj kontakt.</string>
   <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">TextSecure i RedPhone su sada jedna aplikacija: Signal. Pritisnite za pregled.</string>
   <!--ExportFragment-->
   <string name="ExportFragment_export">Izvoz</string>
+  <string name="ExportFragment_export_plaintext_to_storage">Izvezi u obliku običnog teksta na pohranu?</string>
+  <string name="ExportFragment_warning_this_will_export_the_plaintext_contents">Upozorenje, ova radnja će izvesti vaše Signalporuke na pohranu u obliku običnog teksta.</string>
   <string name="ExportFragment_cancel">Odustani</string>
   <string name="ExportFragment_exporting">Izvoz</string>
+  <string name="ExportFragment_exporting_plaintext_to_storage">Izvoz u obliku običnog teksta na pohranu...</string>
+  <string name="ExportFragment_error_unable_to_write_to_storage">Greška, nije moguće pisati na pohranu.</string>
+  <string name="ExportFragment_error_while_writing_to_storage">Greška prilikom pisanja na pohranu.</string>
   <string name="ExportFragment_success">Uspješno!</string>
   <!--GcmRefreshJob-->
   <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Trajna greška u Signal komunikaciji!</string>
+  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Signal se nije uspješno registrirao na Google Play Services. Signal poruke i pozivi su onemogućeni, pokušajte se ponovno registrirati kroz Postavke &gt; Napredno.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nova grupa</string>
   <string name="GroupCreateActivity_actionbar_update_title">Ažuriraj grupu</string>
   <string name="GroupCreateActivity_group_name_hint">Naziv grupe</string>
   <string name="GroupCreateActivity_actionbar_mms_title">Nova MMS grupa</string>
   <string name="GroupCreateActivity_contacts_dont_support_push">Odabrali ste kontakt koji ne podržava Signal grupe, tako da će ovo biti MMS grupa.</string>
+  <string name="GroupCreateActivity_youre_not_registered_for_signal">Niste registrirani za Signal poruke i pozive, tako da su Signal grupe onemogućene. Pokušajte se ponovno registrirati u Postavke &gt; Napredno.</string>
   <string name="GroupCreateActivity_contacts_mms_exception">Dogodila se neočekivana greška zbog koje je stvaranje grupe neuspješno.</string>
   <string name="GroupCreateActivity_contacts_no_members">Potrebna je barem jedna osoba u vašoj grupi!</string>
   <string name="GroupCreateActivity_contacts_invalid_number">Jedan od članova vaše grupe ima broj koji ne može biti ispravno pročitan. Ispravite ili uklonite taj kontakt i pokušajte ponovno.</string>
@@ -189,7 +199,9 @@ ovaj kontakt.</string>
   <string name="GroupCreateActivity_menu_create_title">Stvori grupu</string>
   <string name="GroupCreateActivity_creating_group">Stvaranje %1$s...</string>
   <string name="GroupCreateActivity_updating_group">Ažuriranje %1$s...</string>
+  <string name="GroupCreateActivity_cannot_add_non_push_to_existing_group">Nije moguće dodati %1$s jer nisu Signal korisnici.</string>
   <string name="GroupCreateActivity_loading_group_details">Učitavanje detalja grupe...</string>
+  <string name="GroupCreateActivity_youre_already_in_the_group">Već ste u grupi.</string>
   <!--GroupMembersDialog-->
   <string name="GroupMembersDialog_me">Ja</string>
   <!--ImportExportActivity-->
@@ -222,7 +234,15 @@ ponovno uvoženje će rezultirati duplim porukama.</string>
   <string name="ImportFragment_no_encrypted_backup_found">Nije pronađena kriptirana kopija!</string>
   <string name="ImportFragment_restore_complete">Vraćanje završeno!</string>
   <!--InputPanel-->
+  <string name="InputPanel_tap_and_hold_to_record_a_voice_message_release_to_send">Pritisnite i držite kako biste snimili glasovnu poruku, pustite za slanje</string>
   <!--InviteActivity-->
+  <string name="InviteActivity_share">Dijeli</string>
+  <string name="InviteActivity_send_sms">Pošalji SMS</string>
+  <string name="InviteActivity_cancel">Odustani</string>
+  <string name="InviteActivity_sending">Slanje...</string>
+  <string name="InviteActivity_heart_content_description">Srce</string>
+  <string name="InviteActivity_invitations_sent">Pozivnice poslane!</string>
+  <string name="InviteActivity_invite_to_signal">Pozovi u Signal</string>
   <!--KeyScanningActivity-->
   <string name="KeyScanningActivity_no_scanned_key_found_exclamation">Skenirani ključ nije pronađen!</string>
   <string name="KeyScanningActivity_install_barcode_Scanner">Instaliraj Barcode Scanner?</string>
@@ -440,6 +460,7 @@ Primljena poruka sa nepoznatim ključem identiteta. Pritisnite za obradu i prika
   <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Brzi odgovor nije dostupan kada je Signal zaključan!</string>
   <string name="QuickResponseService_problem_sending_message">Greška prilikom slanja poruke!</string>
   <!--SingleRecipientNotificationBuilder-->
+  <string name="SingleRecipientNotificationBuilder_new_message">Nova poruka</string>
   <!--attachment_type_selector-->
   <!--change_passphrase_activity-->
   <!--contact_selection_activity-->
@@ -629,7 +650,6 @@ neuspješno.</string>
   <string name="AndroidManifest__change_passphrase">Izmjeni lozinku</string>
   <string name="AndroidManifest__verify_identity">Potvrdite identitet</string>
   <string name="AndroidManifest__log_submit">Pošaljite debug zapise</string>
-  <string name="AndroidManifest__media_preview">Prikaz medija</string>
   <string name="AndroidManifest__media_overview">Sve slike</string>
   <string name="AndroidManifest__media_overview_named">Sve slike sa %1$s</string>
   <string name="AndroidManifest_manage_linked_devices">Upravljanje povezanim uređajima</string>
@@ -693,7 +713,6 @@ neuspješno.</string>
   <string name="preferences__pref_led_blink_custom_pattern_set">Prilagođeni LED uzorak treptanja postavljen!</string>
   <string name="preferences__sound">Zvuk</string>
   <string name="preferences__change_notification_sound">Izmjenite zvuk obavijesti</string>
-  <string name="preferences__inthread_notifications">Obavijesti unutar razgovora</string>
   <string name="preferences__play_inthread_notifications">Reproduciraj zvukove obavijesti prilikom pregleda aktivnog razgovora</string>
   <string name="preferences__repeat_alerts">Ponovi upozorenja</string>
   <string name="preferences__never">Nikada</string>
@@ -731,12 +750,9 @@ neuspješno.</string>
   <string name="preferences__mmsc_password">MMSC lozinka</string>
   <string name="preferences__sms_delivery_reports">SMS potvrde isporuke</string>
   <string name="preferences__request_a_delivery_report_for_each_sms_message_you_send">Traži potvrdu isporuke za svaki poslani SMS</string>
-  <string name="preferences__automatically_delete_older_messages_once_a_conversation_thread_exceeds_a_specified_length">Automatski obriši starije poruke nakon što razgovor pređe određenu duljinu</string>
   <string name="preferences__delete_old_messages">Obriši stare poruke</string>
   <string name="preferences__chats">Razgovori i media</string>
   <string name="preferences__conversation_length_limit">Maksimalna duljina razgovora</string>
-  <string name="preferences__trim_all_threads_now">Skrati sve teme sada</string>
-  <string name="preferences__scan_through_all_conversation_threads_and_enforce_conversation_length_limits">Skeniraj sve teme i primijeni maksimalnu duljinu razgovora</string>
   <string name="preferences__light_theme">Svijetla</string>
   <string name="preferences__dark_theme">Tamna</string>
   <string name="preferences__appearance">Izgled</string>
@@ -829,8 +845,6 @@ neuspješno.</string>
   <string name="text_secure_normal__menu_clear_passphrase">Zaključaj</string>
   <string name="text_secure_normal__mark_all_as_read">Označi sve pročitano</string>
   <!--reminder_header-->
-  <string name="reminder_header_expired_build">Vaša Signal inačica je istekla!</string>
-  <string name="reminder_header_expired_build_details">Poruke više neće biti moguće uspješno poslati, nadogradite na najnoviju dostupnu inačicu.</string>
   <string name="reminder_header_sms_default_title">Koristi kao zadanu SMS aplikaciju</string>
   <string name="reminder_header_sms_default_text">Pritisnite kako biste postavili Signal kao zadanu SMS aplikaciju.</string>
   <string name="reminder_header_sms_default_button">POSTAVI</string>
@@ -849,7 +863,6 @@ neuspješno.</string>
   <!--media_preview-->
   <string name="media_preview__save_title">Spremi</string>
   <!--media_preview_activity-->
-  <string name="media_preview_activity__image_content_description">Prikaz slike</string>
   <!--new_conversation_activity-->
   <!--redphone_audio_popup_menu-->
   <string name="redphone_audio_popup_menu__handset">Slušalica</string>
