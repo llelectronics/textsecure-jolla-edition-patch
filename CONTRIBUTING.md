@@ -1,6 +1,6 @@
 ##Translations
 
-Please do not submit issues or pull requests for translation fixes. Anyone can update the translations in [Transifex](https://www.transifex.com/projects/p/textsecure-official/). Please submit your corrections there.
+Please do not submit issues or pull requests for translation fixes. Anyone can update the translations in [Transifex](https://www.transifex.com/projects/p/signal-android/). Please submit your corrections there.
 
 ## Submitting useful bug reports
 1. Search our issues first to make sure this is not a duplicate.
@@ -29,3 +29,5 @@ Truths which we believe to be self-evident:
    clocks are doomed to failure. 
 
 Before you submit a pull request, please check if your code follows the [Code style Guidelines](https://github.com/WhisperSystems/Signal-Android/wiki/Code-Style-Guidelines).
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/WhisperSystems/Signal-Android?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)

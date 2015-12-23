@@ -9,9 +9,15 @@
     <!-- ApplicationPreferencesActivity -->
     <string name="ApplicationPreferencesActivity_currently_s">Currently: %s</string>
     <string name="ApplicationPreferenceActivity_you_havent_set_a_passphrase_yet">You haven\'t set a passphrase yet!</string>
-    <string name="ApplicationPreferencesActivity_messages_per_conversation">%s messages per conversation</string>
+    <plurals name="ApplicationPreferencesActivity_messages_per_conversation">
+        <item quantity="one">1 message per conversation</item>
+        <item quantity="other">%d messages per conversation</item>
+    </plurals>
     <string name="ApplicationPreferencesActivity_delete_all_old_messages_now">Delete all old messages now?</string>
-    <string name="ApplicationPreferencesActivity_are_you_sure_you_would_like_to_immediately_trim_all_conversation_threads_to_the_s_most_recent_messages">Are you sure you would like to immediately trim all conversation threads to the %s most recent messages?</string>
+    <plurals name="ApplicationPreferencesActivity_this_will_immediately_trim_all_conversations_to_the_d_most_recent_messages">
+        <item quantity="one">This will immediately trim all conversations to the most recent message.</item>
+        <item quantity="other">This will immediately trim all conversations to the %d most recent messages.</item>
+    </plurals>
     <string name="ApplicationPreferencesActivity_delete">Delete</string>
     <string name="ApplicationPreferencesActivity_disable_passphrase">Disable passphrase?</string>
     <string name="ApplicationPreferencesActivity_disable_lock_screen">
@@ -34,7 +40,10 @@
     <string name="ApplicationPreferencesActivity_sms_mms_summary">SMS %1$s, MMS %2$s</string>
 
     <!-- AppProtectionPreferenceFragment -->
-    <string name="AppProtectionPreferenceFragment_minutes">%d minutes</string>
+    <plurals name="AppProtectionPreferenceFragment_minutes">
+        <item quantity="one">1 minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
 
     <!-- DraftDatabase -->
     <string name="DraftDatabase_Draft_image_snippet">(image)</string>
@@ -109,8 +118,10 @@
     <string name="ConversationActivity_group_members">Group members</string>
     <string name="ConversationActivity_group_conversation">Group conversation</string>
     <string name="ConversationActivity_unnamed_group">Unnamed group</string>
-    <string name="ConversationActivity_d_recipients_in_group">%d members</string>
-    <string name="ConversationActivity_d_recipients_in_group_singular">1 member</string>
+    <plurals name="ConversationActivity_d_recipients_in_group">
+        <item quantity="one">1 member</item>
+        <item quantity="other">%d members</item>
+    </plurals>
     <string name="ConversationActivity_saved_draft">Saved draft</string>
     <string name="ConversationActivity_invalid_recipient">Invalid recipient!</string>
     <string name="ConversationActivity_calls_not_supported">Calls not supported</string>
@@ -173,11 +184,11 @@
         <item quantity="other">This will permanently delete all %1$d selected conversations.</item>
     </plurals>
     <string name="ConversationListFragment_deleting">Deleting</string>
-    <string name="ConversationListFragment_deleting_selected_threads">Deleting selected threads...</string>
-    <string name="ConversationListFragment_archived_conversations">Archived conversations</string>
+    <string name="ConversationListFragment_deleting_selected_conversations">Deleting selected conversations...</string>
+    <string name="ConversationListFragment_conversations_archived">Conversations archived</string>
     <string name="ConversationListFragment_undo">UNDO</string>
     <string name="ConversationListFragment_moved_conversation_to_inbox">Moved conversation to inbox</string>
-    <string name="ConversationListFragment_archived_conversation">Archived conversation</string>
+    <string name="ConversationListFragment_conversation_archived">Conversation archived</string>
     <string name="ConversationListFragment_moved_conversations_to_inbox">Moved conversations to inbox</string>
 
     <!-- ConversationListItem -->
@@ -208,6 +219,7 @@
     <string name="DeviceListItem_unnamed_device">Unnamed device</string>
     <string name="DeviceListItem_linked_s">Linked %s</string>
     <string name="DeviceListItem_last_active_s">Last active %s</string>
+    <string name="DeviceListItem_today">Today</string>
 
     <!-- ShareActivity -->
     <string name="ShareActivity_share_with">Share with</string>
@@ -372,6 +384,8 @@
     <string name="DeviceProvisioningActivity_content_progress_key_error">Invalid QR code.</string>
     <string name="DeviceProvisioningActivity_sorry_you_have_too_many_devices_linked_already">Sorry, you have too many devices linked already, try removing some...</string>
     <string name="DeviceActivity_sorry_this_is_not_a_valid_device_link_qr_code">Sorry, this is not a valid device link QR code.</string>
+    <string name="DeviceProvisioningActivity_link_a_signal_device">Link a Signal device?</string>
+    <string name="DeviceProvisioningActivity_it_looks_like_youre_trying_to_link_a_signal_device_using_a_3rd_party_scanner">It looks like you\'re trying to link a Signal device using a 3rd party scanner.  For your protection, please scan the code again from within Signal.</string>
 
     <!-- PassphrasePromptActivity -->
     <string name="PassphrasePromptActivity_enter_passphrase">Enter passphrase</string>
@@ -592,7 +606,7 @@
 
     <!-- SingleRecipientNotificationBuilder -->
     <string name="SingleRecipientNotificationBuilder_signal">Signal</string>
-    <string name="SingleRecipientNotificationBuilder_new_message">New Message!</string>
+    <string name="SingleRecipientNotificationBuilder_new_message">New message</string>
 
     <!-- attachment_type_selector -->
     <string name="attachment_type_selector__image">Image</string>
@@ -870,13 +884,13 @@
     <string name="AndroidManifest__change_passphrase">Change passphrase</string>
     <string name="AndroidManifest__verify_identity">Verify identity</string>
     <string name="AndroidManifest__log_submit">Submit debug logs</string>
-    <string name="AndroidManifest__media_preview">Media Preview</string>
+    <string name="AndroidManifest__media_preview">Media preview</string>
     <string name="AndroidManifest__media_overview">All images</string>
     <string name="AndroidManifest__media_overview_named">All images with %1$s</string>
     <string name="AndroidManifest__message_details">Message details</string>
     <string name="AndroidManifest_manage_linked_devices">Manage linked devices</string>
     <string name="AndroidManifest__invite_friends">Invite friends</string>
-    <string name="AndroidManifeset_conversations_archive">Conversations archive</string>
+    <string name="AndroidManifest_archived_conversations">Archived conversations</string>
 
     <!-- arrays.xml -->
     <string name="arrays__import_export">Import / export</string>
@@ -948,7 +962,7 @@
     <string name="preferences__sound">Sound</string>
     <string name="preferences__change_notification_sound">Change notification sound</string>
     <string name="preferences__silent">Silent</string>
-    <string name="preferences__inthread_notifications">In-thread notifications</string>
+    <string name="preferences__in_conversation_notifications">In-conversation notifications</string>
     <string name="preferences__play_inthread_notifications">Play notification sound when viewing an active conversation</string>
     <string name="preferences__repeat_alerts">Repeat alerts</string>
     <string name="preferences__never">Never</string>
@@ -986,12 +1000,12 @@
     <string name="preferences__mmsc_password">MMSC Password</string>
     <string name="preferences__sms_delivery_reports">SMS delivery reports</string>
     <string name="preferences__request_a_delivery_report_for_each_sms_message_you_send">Request a delivery report for each SMS message you send</string>
-    <string name="preferences__automatically_delete_older_messages_once_a_conversation_thread_exceeds_a_specified_length">Automatically delete older messages once a conversation thread exceeds a specified length</string>
+    <string name="preferences__automatically_delete_older_messages_once_a_conversation_exceeds_a_specified_length">Automatically delete older messages once a conversation exceeds a specified length</string>
     <string name="preferences__delete_old_messages">Delete old messages</string>
     <string name="preferences__chats">Chats and media</string>
     <string name="preferences__conversation_length_limit">Conversation length limit</string>
-    <string name="preferences__trim_all_threads_now">Trim all threads now</string>
-    <string name="preferences__scan_through_all_conversation_threads_and_enforce_conversation_length_limits">Scan through all conversation threads and enforce conversation length limits</string>
+    <string name="preferences__trim_all_conversations_now">Trim all conversations now</string>
+    <string name="preferences__scan_through_all_conversations_and_enforce_conversation_length_limits">Scan through all conversations and enforce conversation length limits</string>
     <string name="preferences__devices">Devices</string>
     <string name="preferences__light_theme">Light</string>
     <string name="preferences__dark_theme">Dark</string>
@@ -1058,7 +1072,8 @@
     <!-- conversation_list_batch -->
     <string name="conversation_list_batch__menu_delete_selected">Delete selected</string>
     <string name="conversation_list_batch__menu_select_all">Select all</string>
-    <string name="conversation_list_batch__archive_selected">Archive selected</string>
+    <string name="conversation_list_batch_archive__menu_archive_selected">Archive selected</string>
+    <string name="conversation_list_batch_unarchive__menu_unarchive_selected">Unarchive selected</string>
 
     <!-- conversation_list -->
     <string name="conversation_list__menu_search">Search</string>
@@ -1117,8 +1132,14 @@
     <string name="text_secure_normal__help">Help</string>
 
     <!-- reminder_header -->
-    <string name="reminder_header_expired_build">Your build of Signal has expired!</string>
-    <string name="reminder_header_expired_build_details">Messages will no longer send successfully, please update to the most recent version.</string>
+    <string name="reminder_header_outdated_build">Your version of Signal is outdated</string>
+    <plurals name="reminder_header_outdated_build_details">
+        <item quantity="one">Your version of Signal will expire in 1 day. Tap to update to the most recent version.</item>
+        <item quantity="other">Your version of Signal will expire in %d days. Tap to update to the most recent version.</item>
+    </plurals>
+    <string name="reminder_header_outdated_build_details_today">Your version of Signal will expire today. Tap to update to the most recent version.</string>
+    <string name="reminder_header_expired_build">Your version of Signal has expired!</string>
+    <string name="reminder_header_expired_build_details">Messages will no longer send successfully. Tap to update to the most recent version.</string>
     <string name="reminder_header_expired_build_button">UPDATE</string>
     <string name="reminder_header_sms_default_title">Use as default SMS app</string>
     <string name="reminder_header_sms_default_text">Tap to make Signal your default SMS app.</string>
@@ -1146,7 +1167,7 @@
     <string name="media_preview__save_title">Save</string>
 
     <!-- media_preview_activity -->
-    <string name="media_preview_activity__image_content_description">Image Preview</string>
+    <string name="media_preview_activity__image_content_description">Image preview</string>
 
     <!-- new_conversation_activity -->
     <string name="new_conversation_activity__refresh">Refresh</string>

@@ -23,10 +23,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Spannable;
@@ -200,10 +204,12 @@ public class MessageNotifier {
 
     SingleRecipientNotificationBuilder builder       = new SingleRecipientNotificationBuilder(context, masterSecret, TextSecurePreferences.getNotificationPrivacy(context));
     List<NotificationItem>             notifications = notificationState.getNotifications();
+    Recipients                         recipients    = notifications.get(0).getRecipients();
 
-    builder.setSender(notifications.get(0).getIndividualRecipient());
+    builder.setThread(notifications.get(0).getRecipients());
     builder.setMessageCount(notificationState.getMessageCount());
-    builder.setPrimaryMessageBody(notifications.get(0).getText(), notifications.get(0).getSlideDeck());
+    builder.setPrimaryMessageBody(recipients, notifications.get(0).getIndividualRecipient(),
+                                  notifications.get(0).getText(), notifications.get(0).getSlideDeck());
     builder.setContentIntent(notifications.get(0).getPendingIntent(context));
 
     long timestamp = notifications.get(0).getTimestamp();
@@ -217,8 +223,8 @@ public class MessageNotifier {
     ListIterator<NotificationItem> iterator = notifications.listIterator(notifications.size());
 
     while(iterator.hasPrevious()) {
-      builder.addMessageBody(iterator.previous().getText());
-
+      NotificationItem item = iterator.previous();
+      builder.addMessageBody(item.getRecipients(), item.getIndividualRecipient(), item.getText());
     }
 
     if (signal) {
@@ -263,52 +269,39 @@ public class MessageNotifier {
   }
 
   private static void sendInThreadNotification(Context context, Recipients recipients) {
-    try {
-      if (!TextSecurePreferences.isInThreadNotifications(context)) {
-        return;
-      }
-
-      Uri uri = recipients != null ? recipients.getRingtone() : null;
-
-      if (uri == null) {
-        String ringtone = TextSecurePreferences.getNotificationRingtone(context);
-
-        if (ringtone == null) {
-          Log.w(TAG, "ringtone preference was null.");
-          return;
-        } else {
-          uri = Uri.parse(ringtone);
-        }
-      }
-
-      if (uri == null) {
-        Log.w(TAG, "couldn't parse ringtone uri " + TextSecurePreferences.getNotificationRingtone(context));
-        return;
-      }
-
-      MediaPlayer player = new MediaPlayer();
-      player.setAudioStreamType(AudioManager.STREAM_NOTIFICATION);
-      player.setDataSource(context, uri);
-      player.setLooping(false);
-      player.setVolume(0.25f, 0.25f);
-      player.prepare();
-
-      final AudioManager audioManager = ((AudioManager)context.getSystemService(Context.AUDIO_SERVICE));
-
-      audioManager.requestAudioFocus(null, AudioManager.STREAM_NOTIFICATION,
-                                     AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK);
-
-      player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mp) {
-          audioManager.abandonAudioFocus(null);
-        }
-      });
-
-      player.start();
-    } catch (IOException ioe) {
-      Log.w("MessageNotifier", ioe);
+    if (!TextSecurePreferences.isInThreadNotifications(context)) {
+      return;
     }
+
+    Uri uri = recipients != null ? recipients.getRingtone() : null;
+
+    if (uri == null) {
+      String ringtone = TextSecurePreferences.getNotificationRingtone(context);
+
+      if (ringtone == null) {
+        Log.w(TAG, "ringtone preference was null.");
+        return;
+      } else {
+        uri = Uri.parse(ringtone);
+      }
+    }
+
+    if (uri == null) {
+      Log.w(TAG, "couldn't parse ringtone uri " + TextSecurePreferences.getNotificationRingtone(context));
+      return;
+    }
+
+    Ringtone ringtone = RingtoneManager.getRingtone(context, uri);
+
+    if (Build.VERSION.SDK_INT >= 21) {
+      ringtone.setAudioAttributes(new AudioAttributes.Builder().setContentType(AudioAttributes.CONTENT_TYPE_UNKNOWN)
+                                                               .setUsage(AudioAttributes.USAGE_NOTIFICATION_COMMUNICATION_INSTANT)
+                                                               .build());
+    } else {
+      ringtone.setStreamType(AudioManager.STREAM_NOTIFICATION);
+    }
+
+    ringtone.play();
   }
 
   private static void appendPushNotificationState(@NonNull Context context,
@@ -356,10 +349,8 @@ public class MessageNotifier {
       CharSequence body             = record.getDisplayBody();
       Recipients   threadRecipients = null;
       SlideDeck    slideDeck        = null;
-      long         timestamp;
-
-      if (record.isPush()) timestamp = record.getDateSent();
-      else                 timestamp = record.getDateReceived();
+      long         timestamp        = record.getTimestamp();
+      
 
       if (threadId != -1) {
         threadRecipients = DatabaseFactory.getThreadDatabase(context).getRecipientsForThreadId(threadId);

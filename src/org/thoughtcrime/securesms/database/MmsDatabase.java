@@ -144,6 +144,7 @@ public class MmsDatabase extends MessagingDatabase {
 
   private static final String RAW_ID_WHERE = TABLE_NAME + "._id = ?";
 
+  private final EarlyReceiptCache earlyReceiptCache = new EarlyReceiptCache();
   private final JobManager jobManager;
 
   public MmsDatabase(Context context, SQLiteOpenHelper databaseHelper) {
@@ -193,6 +194,7 @@ public class MmsDatabase extends MessagingDatabase {
     MmsAddressDatabase addressDatabase = DatabaseFactory.getMmsAddressDatabase(context);
     SQLiteDatabase     database        = databaseHelper.getWritableDatabase();
     Cursor             cursor          = null;
+    boolean            found           = false;
 
     try {
       cursor = database.query(TABLE_NAME, new String[] {ID, THREAD_ID, MESSAGE_BOX}, DATE_SENT + " = ?", new String[] {String.valueOf(timestamp)}, null, null, null, null);
@@ -210,16 +212,27 @@ public class MmsDatabase extends MessagingDatabase {
                 long id       = cursor.getLong(cursor.getColumnIndexOrThrow(ID));
                 long threadId = cursor.getLong(cursor.getColumnIndexOrThrow(THREAD_ID));
 
+                found = true;
+
                 database.execSQL("UPDATE " + TABLE_NAME + " SET " +
                                  RECEIPT_COUNT + " = " + RECEIPT_COUNT + " + 1 WHERE " + ID + " = ?",
                                  new String[] {String.valueOf(id)});
 
+                DatabaseFactory.getThreadDatabase(context).update(threadId, false);
                 notifyConversationListeners(threadId);
               }
             } catch (InvalidNumberException e) {
               Log.w("MmsDatabase", e);
             }
           }
+        }
+      }
+
+      if (!found) {
+        try {
+          earlyReceiptCache.increment(timestamp, canonicalizeNumber(context, address));
+        } catch (InvalidNumberException e) {
+          Log.w(TAG, e);
         }
       }
     } finally {
@@ -332,41 +345,50 @@ public class MmsDatabase extends MessagingDatabase {
     return readerFor(masterSecret, rawQuery(where, null));
   }
 
-  private void updateMailboxBitmask(long id, long maskOff, long maskOn) {
+  private void updateMailboxBitmask(long id, long maskOff, long maskOn, Optional<Long> threadId) {
     SQLiteDatabase db = databaseHelper.getWritableDatabase();
     db.execSQL("UPDATE " + TABLE_NAME +
                    " SET " + MESSAGE_BOX + " = (" + MESSAGE_BOX + " & " + (Types.TOTAL_MASK - maskOff) + " | " + maskOn + " )" +
                    " WHERE " + ID + " = ?", new String[] {id + ""});
+
+    if (threadId.isPresent()) {
+      DatabaseFactory.getThreadDatabase(context).update(threadId.get(), false);
+    }
   }
 
   public void markAsOutbox(long messageId) {
-    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_OUTBOX_TYPE);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_OUTBOX_TYPE, Optional.of(threadId));
   }
 
   public void markAsForcedSms(long messageId) {
-    updateMailboxBitmask(messageId, Types.PUSH_MESSAGE_BIT, Types.MESSAGE_FORCE_SMS_BIT);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.PUSH_MESSAGE_BIT, Types.MESSAGE_FORCE_SMS_BIT, Optional.of(threadId));
+    notifyConversationListeners(threadId);
   }
 
   public void markAsPendingInsecureSmsFallback(long messageId) {
-    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_PENDING_INSECURE_SMS_FALLBACK);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_PENDING_INSECURE_SMS_FALLBACK, Optional.of(threadId));
+    notifyConversationListeners(threadId);
   }
 
   public void markAsSending(long messageId) {
-    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENDING_TYPE);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENDING_TYPE, Optional.of(threadId));
+    notifyConversationListeners(threadId);
   }
 
   public void markAsSentFailed(long messageId) {
-    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENT_FAILED_TYPE);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENT_FAILED_TYPE, Optional.of(threadId));
+    notifyConversationListeners(threadId);
   }
 
   public void markAsSent(long messageId) {
-    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENT_TYPE);
-    notifyConversationListeners(getThreadIdForMessage(messageId));
+    long threadId = getThreadIdForMessage(messageId);
+    updateMailboxBitmask(messageId, Types.BASE_TYPE_MASK, Types.BASE_SENT_TYPE, Optional.of(threadId));
+    notifyConversationListeners(threadId);
   }
 
   public void markDownloadState(long messageId, long state) {
@@ -379,34 +401,34 @@ public class MmsDatabase extends MessagingDatabase {
   }
 
   public void markAsNoSession(long messageId, long threadId) {
-    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_NO_SESSION_BIT);
+    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_NO_SESSION_BIT, Optional.of(threadId));
     notifyConversationListeners(threadId);
   }
 
   public void markAsSecure(long messageId) {
-    updateMailboxBitmask(messageId, 0, Types.SECURE_MESSAGE_BIT);
+    updateMailboxBitmask(messageId, 0, Types.SECURE_MESSAGE_BIT, Optional.<Long>absent());
   }
 
   public void markAsInsecure(long messageId) {
-    updateMailboxBitmask(messageId, Types.SECURE_MESSAGE_BIT, 0);
+    updateMailboxBitmask(messageId, Types.SECURE_MESSAGE_BIT, 0, Optional.<Long>absent());
   }
 
   public void markAsPush(long messageId) {
-    updateMailboxBitmask(messageId, 0, Types.PUSH_MESSAGE_BIT);
+    updateMailboxBitmask(messageId, 0, Types.PUSH_MESSAGE_BIT, Optional.<Long>absent());
   }
 
   public void markAsDecryptFailed(long messageId, long threadId) {
-    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_FAILED_BIT);
+    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_FAILED_BIT, Optional.of(threadId));
     notifyConversationListeners(threadId);
   }
 
   public void markAsDecryptDuplicate(long messageId, long threadId) {
-    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_DUPLICATE_BIT);
+    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_DUPLICATE_BIT, Optional.of(threadId));
     notifyConversationListeners(threadId);
   }
 
   public void markAsLegacyVersion(long messageId, long threadId) {
-    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_LEGACY_BIT);
+    updateMailboxBitmask(messageId, Types.ENCRYPTION_MASK, Types.ENCRYPTION_REMOTE_LEGACY_BIT, Optional.of(threadId));
     notifyConversationListeners(threadId);
   }
 
@@ -739,6 +761,16 @@ public class MmsDatabase extends MessagingDatabase {
     contentValues.put(THREAD_ID, threadId);
     contentValues.put(READ, 1);
     contentValues.put(DATE_RECEIVED, System.currentTimeMillis());
+
+    if (message.getRecipients().isSingleRecipient()) {
+      try {
+        contentValues.put(RECEIPT_COUNT, earlyReceiptCache.remove(message.getSentTimeMillis(),
+                                                                  canonicalizeNumber(context, message.getRecipients().getPrimaryRecipient().getNumber())));
+      } catch (InvalidNumberException e) {
+        Log.w(TAG, e);
+      }
+    }
+
     contentValues.remove(ADDRESS);
 
     long messageId = insertMediaMessage(masterSecret, addresses, message.getBody(),
