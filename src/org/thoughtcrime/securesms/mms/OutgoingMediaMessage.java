@@ -1,5 +1,7 @@
 package org.thoughtcrime.securesms.mms;
 
+import android.text.TextUtils;
+
 import org.thoughtcrime.securesms.attachments.Attachment;
 import org.thoughtcrime.securesms.recipients.Recipients;
 
@@ -26,7 +28,11 @@ public class OutgoingMediaMessage {
 
   public OutgoingMediaMessage(Recipients recipients, SlideDeck slideDeck, String message, long sentTimeMillis, int distributionType)
   {
-    this(recipients, message, slideDeck.asAttachments(), sentTimeMillis, distributionType);
+    this(recipients,
+         buildMessage(slideDeck, message),
+         slideDeck.asAttachments(),
+         sentTimeMillis,
+         distributionType);
   }
 
   public OutgoingMediaMessage(OutgoingMediaMessage that) {
@@ -65,4 +71,13 @@ public class OutgoingMediaMessage {
     return sentTimeMillis;
   }
 
+  private static String buildMessage(SlideDeck slideDeck, String message) {
+    if (!TextUtils.isEmpty(message) && !TextUtils.isEmpty(slideDeck.getBody())) {
+      return slideDeck.getBody() + "\n\n" + message;
+    } else if (!TextUtils.isEmpty(message)) {
+      return message;
+    } else {
+      return slideDeck.getBody();
+    }
+  }
 }

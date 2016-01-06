@@ -38,6 +38,8 @@
     <string name="ApplicationPreferencesActivity_off">off</string>
     <string name="ApplicationPreferencesActivity_Off">Off</string>
     <string name="ApplicationPreferencesActivity_sms_mms_summary">SMS %1$s, MMS %2$s</string>
+    <string name="ApplicationPreferencesActivity_privacy_summary">Passphrase %1$s, Screen security %2$s</string>
+    <string name="ApplicationPreferencesActivity_appearance_summary">Theme %1$s, Language %2$s</string>
 
     <!-- AppProtectionPreferenceFragment -->
     <plurals name="AppProtectionPreferenceFragment_minutes">
@@ -49,6 +51,7 @@
     <string name="DraftDatabase_Draft_image_snippet">(image)</string>
     <string name="DraftDatabase_Draft_audio_snippet">(audio)</string>
     <string name="DraftDatabase_Draft_video_snippet">(video)</string>
+    <string name="DraftDatabase_Draft_location_snippet">(location)</string>
 
     <!-- AttchmentManager -->
     <string name="AttachmentManager_cant_open_media_selection">Can\'t find an app to select media.</string>
@@ -185,11 +188,15 @@
     </plurals>
     <string name="ConversationListFragment_deleting">Deleting</string>
     <string name="ConversationListFragment_deleting_selected_conversations">Deleting selected conversations...</string>
-    <string name="ConversationListFragment_conversations_archived">Conversations archived</string>
+    <plurals name="ConversationListFragment_conversations_archived">
+        <item quantity="one">Conversation archived</item>
+        <item quantity="other">%d conversations archived</item>
+    </plurals>
     <string name="ConversationListFragment_undo">UNDO</string>
-    <string name="ConversationListFragment_moved_conversation_to_inbox">Moved conversation to inbox</string>
-    <string name="ConversationListFragment_conversation_archived">Conversation archived</string>
-    <string name="ConversationListFragment_moved_conversations_to_inbox">Moved conversations to inbox</string>
+    <plurals name="ConversationListFragment_moved_conversations_to_inbox">
+        <item quantity="one">Moved conversation to inbox</item>
+        <item quantity="other">Moved %d conversations to inbox</item>
+    </plurals>
 
     <!-- ConversationListItem -->
     <string name="ConversationListItem_key_exchange_message">Key exchange message...</string>
@@ -614,6 +621,7 @@
     <string name="attachment_type_selector__video">Video</string>
     <string name="attachment_type_selector__contact">Contact</string>
     <string name="attachment_type_selector__camera">Camera</string>
+    <string name="attachment_type_selector__location">Location</string>
 
     <!-- change_passphrase_activity -->
     <string name="change_passphrase_activity__old_passphrase">Old passphrase</string>
@@ -940,18 +948,16 @@
     <string name="preferences__change_passphrase">Change passphrase</string>
     <string name="preferences__change_your_passphrase">Change your passphrase</string>
     <string name="preferences__enable_passphrase">Enable passphrase</string>
-    <string name="preferences__passphrase_summary">Passphrase %s</string>
-    <string name="preferences__enable_lock_screen_for_messages">Enable lock screen for messages</string>
+    <string name="preferences__lock_signal_and_message_notifications_with_a_passphrase">Lock Signal and message notifications with a passphrase</string>
     <string name="preferences__screen_security">Screen security</string>
-    <string name="preferences__screen_security_summary">Screen security %s</string>
     <string name="preferences__disable_screen_security_to_allow_screen_shots">Block screenshots in the recents list and inside the app</string>
-    <string name="preferences__forget_passphrase_from_memory_after_some_interval">Forget passphrase from memory after some interval</string>
-    <string name="preferences__timeout_passphrase">Timeout passphrase</string>
-    <string name="preferences__pref_timeout_interval_dialogtitle">Select passphrase timeout</string>
-    <string name="preferences__pref_timeout_interval_title">Timeout interval</string>
-    <string name="preferences__the_amount_of_time_to_wait_before_forgetting_passphrase">The amount of time to wait before forgetting passphrase from memory</string>
+    <string name="preferences__auto_lock_signal_after_a_specified_time_interval_of_inactivity">Auto-lock Signal after a specified time interval of inactivity</string>
+    <string name="preferences__inactivity_timeout_passphrase">Inactivity timeout passphrase</string>
+    <string name="preferences__inactivity_timeout_interval">Inactivity timeout interval</string>
     <string name="preferences__notifications">Notifications</string>
     <string name="preferences__enable_message_notifications">Enable message notifications</string>
+    <string name="preferences__new_contacts_notifications">New contacts notifications</string>
+    <string name="preferences__show_a_notification_for_new_signal_contacts">Show a notification for new Signal contacts</string>
     <string name="preferences__led_color">LED color</string>
     <string name="preferences__led_color_unknown">Unknown</string>
     <string name="preferences__pref_led_blink_title">LED blink pattern</string>
@@ -1011,10 +1017,8 @@
     <string name="preferences__dark_theme">Dark</string>
     <string name="preferences__appearance">Appearance</string>
     <string name="preferences__theme">Theme</string>
-    <string name="preferences__theme_summary">Theme %s</string>
     <string name="preferences__default">Default</string>
     <string name="preferences__language">Language</string>
-    <string name="preferences__language_summary">Language %s</string>
     <string name="preferences__signal_messages_and_calls">Signal messages and calls</string>
     <string name="preferences__free_private_messages_and_calls">Free private messages and calls to Signal users</string>
     <string name="preferences__submit_debug_log">Submit debug log</string>

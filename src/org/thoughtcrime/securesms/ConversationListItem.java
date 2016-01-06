@@ -106,6 +106,9 @@ public class ConversationListItem extends RelativeLayout
     this.thumbnailView           = (ThumbnailView)      findViewById(R.id.thumbnail);
     this.archivedView            = ViewUtil.findById(this, R.id.archived);
     thumbnailView.setClickable(false);
+
+    ViewUtil.setTextViewGravityStart(this.fromView, getContext());
+    ViewUtil.setTextViewGravityStart(this.subjectView, getContext());
   }
 
   public void bind(@NonNull MasterSecret masterSecret, @NonNull ThreadRecord thread,
@@ -175,6 +178,9 @@ public class ConversationListItem extends RelativeLayout
 
       LayoutParams subjectParams = (RelativeLayout.LayoutParams)this.subjectView.getLayoutParams();
       subjectParams.addRule(RelativeLayout.LEFT_OF, R.id.thumbnail);
+      if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR1) {
+        subjectParams.addRule(RelativeLayout.START_OF, R.id.thumbnail);
+      }
       this.subjectView.setLayoutParams(subjectParams);
       this.post(new ThumbnailPositioner(thumbnailView, archivedView, deliveryStatusIndicator, dateView));
     } else {
@@ -182,6 +188,9 @@ public class ConversationListItem extends RelativeLayout
 
       LayoutParams subjectParams = (RelativeLayout.LayoutParams)this.subjectView.getLayoutParams();
       subjectParams.addRule(RelativeLayout.LEFT_OF, R.id.delivery_status);
+      if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR1) {
+        subjectParams.addRule(RelativeLayout.START_OF, R.id.delivery_status);
+      }
       this.subjectView.setLayoutParams(subjectParams);
     }
   }
@@ -252,8 +261,14 @@ public class ConversationListItem extends RelativeLayout
           (archivedView.getWidth() + deliveryStatusView.getWidth()) > dateView.getWidth())
       {
         thumbnailParams.addRule(RelativeLayout.LEFT_OF, R.id.delivery_status);
+        if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR1) {
+          thumbnailParams.addRule(RelativeLayout.START_OF, R.id.delivery_status);
+        }
       } else {
         thumbnailParams.addRule(RelativeLayout.LEFT_OF, R.id.date);
+        if (VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR1) {
+          thumbnailParams.addRule(RelativeLayout.START_OF, R.id.date);
+        }
       }
 
       thumbnailView.setLayoutParams(thumbnailParams);
