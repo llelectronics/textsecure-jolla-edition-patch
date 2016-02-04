@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="org.thoughtcrime.securesms"
-      android:versionCode="181"
-      android:versionName="3.9.1">
+      android:versionCode="182"
+      android:versionName="3.10.0">
 
     <uses-sdk tools:overrideLibrary="com.amulyakhare.textdrawable,com.astuetz.pagerslidingtabstrip,pl.tajchert.waitingdots,com.h6ah4i.android.multiselectlistpreferencecompat"/>
 
@@ -441,7 +441,7 @@
 
     <receiver android:name=".notifications.WearReplyReceiver"
               android:enabled="true"
-              android:exported="true">
+              android:exported="false">
         <intent-filter>
             <action android:name="${applicationId}.notifications.WEAR_REPLY"/>
         </intent-filter>
@@ -449,11 +449,13 @@
 
     <provider android:name=".providers.PartProvider"
               android:grantUriPermissions="true"
-              android:authorities="${applicationId}.provider" />
+              android:exported="false"
+              android:authorities="${applicationId}.provider.securesms" />
 
     <provider android:name=".providers.MmsBodyProvider"
               android:grantUriPermissions="true"
-              android:authorities="${applicationId}.provider.mms" />
+              android:exported="false"
+              android:authorities="${applicationId}.provider.securesms.mms" />
 
     <receiver android:name=".service.RegistrationNotifier"
               android:exported="false">
