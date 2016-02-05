@@ -218,7 +218,6 @@ android {
         dev.initWith(buildTypes.debug)
         dev {
             buildConfigField "boolean", "DEV_BUILD", "true"
-            applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
         }
         websockets.initWith(buildTypes.dev)
