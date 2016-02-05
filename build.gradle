@@ -161,7 +161,6 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.thoughtcrime.securesms"
         minSdkVersion 9
         targetSdkVersion 22
 
@@ -219,7 +218,6 @@ android {
         dev.initWith(buildTypes.debug)
         dev {
             buildConfigField "boolean", "DEV_BUILD", "true"
-            applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
         }
         websockets.initWith(buildTypes.dev)
