@@ -56,7 +56,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.protobuf.ByteString;
 
 import org.thoughtcrime.redphone.RedPhone;
@@ -77,7 +76,6 @@ import org.thoughtcrime.securesms.components.camera.QuickAttachmentDrawer;
 import org.thoughtcrime.securesms.components.camera.QuickAttachmentDrawer.AttachmentDrawerListener;
 import org.thoughtcrime.securesms.components.camera.QuickAttachmentDrawer.DrawerState;
 import org.thoughtcrime.securesms.components.emoji.EmojiDrawer;
-import org.thoughtcrime.securesms.components.location.SignalPlace;
 import org.thoughtcrime.securesms.components.reminder.InviteReminder;
 import org.thoughtcrime.securesms.components.reminder.ReminderView;
 import org.thoughtcrime.securesms.contacts.ContactAccessor;
@@ -100,7 +98,6 @@ import org.thoughtcrime.securesms.mms.AttachmentManager;
 import org.thoughtcrime.securesms.mms.AttachmentManager.MediaType;
 import org.thoughtcrime.securesms.mms.AttachmentTypeSelectorAdapter;
 import org.thoughtcrime.securesms.mms.AudioSlide;
-import org.thoughtcrime.securesms.mms.LocationSlide;
 import org.thoughtcrime.securesms.mms.MediaConstraints;
 import org.thoughtcrime.securesms.mms.OutgoingGroupMediaMessage;
 import org.thoughtcrime.securesms.mms.OutgoingMediaMessage;
@@ -180,7 +177,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
   private static final int GROUP_EDIT        = 5;
   private static final int TAKE_PHOTO        = 6;
   private static final int ADD_CONTACT       = 7;
-  private static final int PICK_LOCATION     = 8;
 
   private   MasterSecret          masterSecret;
   protected ComposeText           composeText;
@@ -360,10 +356,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       recipients = RecipientFactory.getRecipientsForIds(ConversationActivity.this, recipients.getIds(), true);
       recipients.addListener(this);
       fragment.reloadList();
-      break;
-    case PICK_LOCATION:
-      SignalPlace place = new SignalPlace(PlacePicker.getPlace(data, this));
-      attachmentManager.setLocation(masterSecret, place, getCurrentMediaConstraints());
       break;
     }
   }
@@ -758,20 +750,14 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       @Override
       protected void onPostExecute(List<Draft> drafts) {
         for (Draft draft : drafts) {
-          try {
-            if (draft.getType().equals(Draft.TEXT)) {
-              composeText.setText(draft.getValue());
-            } else if (draft.getType().equals(Draft.LOCATION)) {
-              attachmentManager.setLocation(masterSecret, SignalPlace.deserialize(draft.getValue()), getCurrentMediaConstraints());
-            } else if (draft.getType().equals(Draft.IMAGE)) {
-              setMedia(Uri.parse(draft.getValue()), MediaType.IMAGE);
-            } else if (draft.getType().equals(Draft.AUDIO)) {
-              setMedia(Uri.parse(draft.getValue()), MediaType.AUDIO);
-            } else if (draft.getType().equals(Draft.VIDEO)) {
-              setMedia(Uri.parse(draft.getValue()), MediaType.VIDEO);
-            }
-          } catch (IOException e) {
-            Log.w(TAG, e);
+          if (draft.getType().equals(Draft.TEXT)) {
+            composeText.setText(draft.getValue());
+          } else if (draft.getType().equals(Draft.IMAGE)) {
+            setMedia(Uri.parse(draft.getValue()), MediaType.IMAGE);
+          } else if (draft.getType().equals(Draft.AUDIO)) {
+            setMedia(Uri.parse(draft.getValue()), MediaType.AUDIO);
+          } else if (draft.getType().equals(Draft.VIDEO)) {
+            setMedia(Uri.parse(draft.getValue()), MediaType.VIDEO);
           }
         }
 
@@ -1042,8 +1028,6 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
       AttachmentManager.selectAudio(this, PICK_AUDIO); break;
     case AttachmentTypeSelectorAdapter.ADD_CONTACT_INFO:
       AttachmentManager.selectContactInfo(this, PICK_CONTACT_INFO); break;
-    case AttachmentTypeSelector.ADD_LOCATION:
-      AttachmentManager.selectLocation(this, PICK_LOCATION); break;
     case AttachmentTypeSelectorAdapter.TAKE_PHOTO:
       attachmentManager.capturePhoto(this, TAKE_PHOTO); break;
     }
@@ -1091,10 +1075,9 @@ public class ConversationActivity extends PassphraseRequiredActionBarActivity
     }
 
     for (Slide slide : attachmentManager.buildSlideDeck().getSlides()) {
-      if      (slide.hasAudio())    drafts.add(new Draft(Draft.AUDIO, slide.getUri().toString()));
-      else if (slide.hasVideo())    drafts.add(new Draft(Draft.VIDEO, slide.getUri().toString()));
-      else if (slide.hasLocation()) drafts.add(new Draft(Draft.LOCATION, ((LocationSlide)slide).getPlace().serialize()));
-      else if (slide.hasImage())    drafts.add(new Draft(Draft.IMAGE, slide.getUri().toString()));
+      if      (slide.hasAudio()) drafts.add(new Draft(Draft.AUDIO, slide.getUri().toString()));
+      else if (slide.hasVideo()) drafts.add(new Draft(Draft.VIDEO, slide.getUri().toString()));
+      else if (slide.hasImage()) drafts.add(new Draft(Draft.IMAGE, slide.getUri().toString()));
     }
 
     return drafts;
