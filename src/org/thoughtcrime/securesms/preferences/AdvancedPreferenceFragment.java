@@ -17,8 +17,6 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
-
 import org.thoughtcrime.redphone.signaling.RedPhoneAccountManager;
 import org.thoughtcrime.redphone.signaling.RedPhoneTrustStore;
 import org.thoughtcrime.redphone.signaling.UnauthorizedException;
@@ -206,8 +204,6 @@ public class AdvancedPreferenceFragment extends PreferenceFragment {
             } catch (UnauthorizedException e) {
               Log.w(TAG, e);
             }
-
-            GoogleCloudMessaging.getInstance(context).unregister();
           }
 
           return SUCCESS;
