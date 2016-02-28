@@ -221,10 +221,10 @@
   <string name="ShareActivity_share_with">לשתף עם</string>
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">ברוך בואך לסיגנל.</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">אפליקציות TextSecure ו־RedPhone הן עכשיו תכנת מסרים אחת לכל מצב: סיגנל.</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">אפליקציות TextLibre ו־PhoneLibre הן עכשיו תכנת מסרים אחת לכל מצב: סיגנל.</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">ברוך בואך לסיגנל!</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">אפליקציית TextSecure נקראת עכשיו סיגנל.</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">אפליקציות TextSecure ו־RedPhone הן עכשיו אפליקציה אחת: סיגנל. נא להקיש כדי ללמוד עליה.</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">אפליקציית TextLibre נקראת עכשיו סיגנל.</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">אפליקציות TextLibre ו־PhoneLibre הן עכשיו אפליקציה אחת: סיגנל. נא להקיש כדי ללמוד עליה.</string>
   <!--ExportFragment-->
   <string name="ExportFragment_export">ייצוא</string>
   <string name="ExportFragment_export_plaintext_to_storage">לייצא טקסט רגיל לאחסון?</string>
@@ -697,7 +697,7 @@
   <string name="registration_problems__sms_interceptors">מיירטי SMS</string>
   <string name="registration_problems__some_third_party_text_messaging_clients_such_as_handcent">
 לקוחות צד־שלישי אחדים לשליחת מסרים, כגון Handcent או GoSMS לא מתנהגים יפה
-ומיירטים את כל ה־SMS־ים הנכנסים. נא לבדוק שקיבלת SMS שמתחיל במילים „Your Signal verification code:”, ואולי כדאי גם
+ומיירטים את כל ה־SMS־ים הנכנסים. נא לבדוק שקיבלת SMS שמתחיל במילים „Your LibreSignal verification code:”, ואולי כדאי גם
 שתגדיר את אפליקציית המסרים שלך כך שתיתן למסרים לעבור.</string>
   <string name="registration_problems__incorrect_number">מספר שגוי.</string>
   <string name="registration_problems__please_checkt_to_make_sure_you_entered_your_number_correctly">

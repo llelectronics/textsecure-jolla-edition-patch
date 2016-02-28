@@ -206,10 +206,10 @@
   <string name="ShareActivity_share_with">共享给</string>
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">欢迎来到暗号。</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">从现在起， TextSecure 和 RedPhone 将是同一个信息平台，最佳的解决方案：暗号。</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_called_signal">从现在起， TextLibre 和 PhoneLibre 将是同一个信息平台，最佳的解决方案：暗号。</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">欢迎来到暗号。</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure 已命名为 暗号 。</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">从现在起， TextSecure 和 RedPhone 将是同一个信息平台：暗号。点击以开始探索。</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextLibre 已命名为 暗号 。</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal_long">从现在起， TextLibre 和 PhoneLibre 将是同一个信息平台：暗号。点击以开始探索。</string>
   <!--ExportFragment-->
   <string name="ExportFragment_export">导出</string>
   <string name="ExportFragment_export_plaintext_to_storage">导出明文到存储？</string>
@@ -675,7 +675,7 @@
   <string name="registration_problems__sms_interceptors">短信拦截</string>
   <string name="registration_problems__some_third_party_text_messaging_clients_such_as_handcent">
 一些第三方的短信客户端，比如 Handcent 或 GoSMS ，可能会先拦截进入的短信。如果您收到一个内容
-包含“你的暗号验证码：”（Your Signal verification code:），您则需要配置您的
+包含“你的暗号验证码：”（Your LibreSignal verification code:），您则需要配置您的
 第三方短信应用允许该短信通过。</string>
   <string name="registration_problems__incorrect_number">不正确的号码。</string>
   <string name="registration_problems__please_checkt_to_make_sure_you_entered_your_number_correctly">

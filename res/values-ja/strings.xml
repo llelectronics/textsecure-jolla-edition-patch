@@ -12,13 +12,13 @@
   <string name="ApplicationPreferencesActivity_disable_passphrase">パスワードを無効にしますか？</string>
   <string name="ApplicationPreferencesActivity_disable">無効</string>
   <string name="ApplicationPreferencesActivity_unregistering">登録取り消し</string>
-  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">Signalでのメッセージ・通話を無効にしますか？</string>
-  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls_by_unregistering">サーバーから登録を取消します。Signalを使ったメッセージのやり取りや通話はできなくなります。 再びSignalを使うためには、あなたの電話番号を再登録をする必要があります。</string>
+  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls">LibreSignalでのメッセージ・通話を無効にしますか？</string>
+  <string name="ApplicationPreferencesActivity_disable_signal_messages_and_calls_by_unregistering">サーバーから登録を取消します。LibreSignalを使ったメッセージのやり取りや通話はできなくなります。 再びLibreSignalを使うためには、あなたの電話番号を再登録をする必要があります。</string>
   <string name="ApplicationPreferencesActivity_error_connecting_to_server">サーバー接続中にエラーが発生しました！</string>
   <string name="ApplicationPreferencesActivity_sms_enabled">SMS 有効</string>
   <string name="ApplicationPreferencesActivity_touch_to_change_your_default_sms_app">タッチしてデフォルトのSMSアプリを変更</string>
   <string name="ApplicationPreferencesActivity_sms_disabled">SMS 無効</string>
-  <string name="ApplicationPreferencesActivity_touch_to_make_signal_your_default_sms_app">タッチして、SignalをデフォルトのSMSアプリにする</string>
+  <string name="ApplicationPreferencesActivity_touch_to_make_signal_your_default_sms_app">タッチして、LibreSignalをデフォルトのSMSアプリにする</string>
   <string name="ApplicationPreferencesActivity_on">オン</string>
   <string name="ApplicationPreferencesActivity_On">オン</string>
   <string name="ApplicationPreferencesActivity_off">オフ</string>
@@ -49,13 +49,13 @@
   <string name="BlockedContactsActivity_blocked_contacts">ブロックした連絡先</string>
   <!--CallScreen-->
   <!--ConfirmIdentityDialog-->
-  <string name="ConfirmIdentityDialog_the_signature_on_this_key_exchange_is_different">%1$sの認証キーが変えられています。 誰かがあなたの通信を傍受しようとしているか、もしくは 単に%2$sさんがSignalを再インストールしたため、認証キーが新しくなった可能性があります。</string>
+  <string name="ConfirmIdentityDialog_the_signature_on_this_key_exchange_is_different">%1$sの認証キーが変えられています。 誰かがあなたの通信を傍受しようとしているか、もしくは 単に%2$sさんがLibreSignalを再インストールしたため、認証キーが新しくなった可能性があります。</string>
   <string name="ConfirmIdentityDialog_you_may_wish_to_verify_this_contact">この連絡先を
 照合することが推奨されています。</string>
   <string name="ConfirmIdentityDialog_accept">承認</string>
   <!--ContactsDatabase-->
   <string name="ContactsDatabase_message_s">メッセージ %s</string>
-  <string name="ContactsDatabase_signal_call_s">Signalコール %s</string>
+  <string name="ContactsDatabase_signal_call_s">LibreSignalコール %s</string>
   <!--ConversationItem-->
   <string name="ConversationItem_message_size_d_kb">メッセージのサイズ： %d KB</string>
   <string name="ConversationItem_expires_s">有効期限： %s</string>
@@ -69,7 +69,7 @@
   <string name="ConversationItem_click_to_approve_unencrypted">タップしてセキュアでない通信を行う</string>
   <string name="ConversationItem_click_to_approve_unencrypted_sms_dialog_title">暗号化されないSMSに切り替えますか？</string>
   <string name="ConversationItem_click_to_approve_unencrypted_mms_dialog_title">暗号化されないMMSに切り替えますか？</string>
-  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message">相手がSignalを使用していないので、このメッセージは暗号化<b>されません</b>。 通信安全上、問題のある方法でメッセージを送信しますか?</string>
+  <string name="ConversationItem_click_to_approve_unencrypted_dialog_message">相手がLibreSignalを使用していないので、このメッセージは暗号化<b>されません</b>。 通信安全上、問題のある方法でメッセージを送信しますか?</string>
   <string name="ConversationItem_unable_to_open_media">このメディアを開けるアプリが見つかりません。</string>
   <string name="ConversationItem_from_s">%sから</string>
   <string name="ConversationItem_to_s">%sへ</string>
@@ -194,7 +194,7 @@
   <string name="InviteActivity_share">シェア</string>
   <string name="InviteActivity_send_sms">SMSで送る</string>
   <string name="InviteActivity_sending">送信中…</string>
-  <string name="InviteActivity_invite_to_signal">Signalをオススメする</string>
+  <string name="InviteActivity_invite_to_signal">LibreSignalをオススメする</string>
   <string name="InviteActivity_no_app_to_share_to">シェアするためのアプリがないようです。</string>
   <!--KeyScanningActivity-->
   <string name="KeyScanningActivity_no_scanned_key_found_exclamation">スキャンした鍵はありません。</string>
@@ -555,7 +555,7 @@
   <string name="preferences__change_passphrase">パスワードの変更</string>
   <string name="preferences__change_your_passphrase">パスワードを変更します</string>
   <string name="preferences__enable_passphrase">パスワードを有効にする</string>
-  <string name="preferences__lock_signal_and_message_notifications_with_a_passphrase">Signalとメッセージ通知をパスワードでロックします</string>
+  <string name="preferences__lock_signal_and_message_notifications_with_a_passphrase">LibreSignalとメッセージ通知をパスワードでロックします</string>
   <string name="preferences__screen_security">スクリーンセキュリティ</string>
   <string name="preferences__disable_screen_security_to_allow_screen_shots">スクリーンショットをアプリ表示の場合防ぐ</string>
   <string name="preferences__inactivity_timeout_passphrase">パスワードのタイムアウト</string>
@@ -696,7 +696,7 @@
   <string name="text_secure_normal__mark_all_as_read">すべて既読にする</string>
   <string name="text_secure_normal__invite_friends">友達にオススメする</string>
   <!--reminder_header-->
-  <string name="reminder_header_invite_title">Signalをオススメする</string>
+  <string name="reminder_header_invite_title">LibreSignalをオススメする</string>
   <string name="reminder_header_invite_text">%1$sさんとの通信を、進化させよう！</string>
   <string name="reminder_header_share_title">友達にオススメしよう！</string>
   <string name="reminder_header_share_button">シェア</string>

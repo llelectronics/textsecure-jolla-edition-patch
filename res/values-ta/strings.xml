@@ -182,7 +182,7 @@
   <!--ExperienceUpgradeActivity-->
   <string name="ExperienceUpgradeActivity_welcome_to_signal_dgaf">சமிக்ஞைக்கு வரவேற்கிறது.</string>
   <string name="ExperienceUpgradeActivity_welcome_to_signal_excited">சமிக்ஞைக்கு வரவேற்கிறது!</string>
-  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextSecure தற்ப்போது சமிக்ஞை</string>
+  <string name="ExperienceUpgradeActivity_textsecure_is_now_signal">TextLibre தற்ப்போது சமிக்ஞை</string>
   <!--ExportFragment-->
   <string name="ExportFragment_export">ஏற்றுமதி செய்</string>
   <string name="ExportFragment_cancel">ரத்து</string>
