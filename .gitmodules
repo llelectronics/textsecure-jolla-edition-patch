@@ -1,0 +1,3 @@
+[submodule "libtextsecure-java"]
+	path = libtextsecure-java
+	url = https://github.com/LibreSignal/libtextsecure-java.git
