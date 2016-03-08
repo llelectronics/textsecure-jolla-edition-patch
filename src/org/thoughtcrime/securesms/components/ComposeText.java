@@ -5,20 +5,24 @@ import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.InputType;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.TextUtils.TruncateAt;
+import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
 import android.view.inputmethod.EditorInfo;
 
+import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.TransportOption;
 import org.thoughtcrime.securesms.components.emoji.EmojiEditText;
 import org.thoughtcrime.securesms.util.TextSecurePreferences;
 
 public class ComposeText extends EmojiEditText {
 
-  private CharSequence hint;
-  private CharSequence subHint;
+  private SpannableString hint;
+  private SpannableString subHint;
 
   public ComposeText(Context context) {
     super(context);
@@ -55,8 +59,15 @@ public class ComposeText extends EmojiEditText {
   }
 
   public void setHint(@NonNull String hint, @Nullable CharSequence subHint) {
-    this.hint = hint;
-    this.subHint = subHint;
+    this.hint = new SpannableString(hint);
+    this.hint.setSpan(new RelativeSizeSpan(0.8f), 0, hint.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+    if (subHint != null) {
+      this.subHint = new SpannableString(subHint);
+      this.subHint.setSpan(new RelativeSizeSpan(0.8f), 0, subHint.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+    } else {
+      this.subHint = null;
+    }
 
     if (this.subHint != null) {
       super.setHint(new SpannableStringBuilder().append(ellipsizeToWidth(this.hint))
@@ -104,6 +115,9 @@ public class ComposeText extends EmojiEditText {
 
     setInputType(inputType);
     setImeOptions(imeOptions);
-    setHint(transport.getComposeHint(), transport.getSimName().isPresent() ? "From " + transport.getSimName().get() : null);
+    setHint(transport.getComposeHint(),
+            transport.getSimName().isPresent()
+                ? getContext().getString(R.string.conversation_activity__from_sim_name, transport.getSimName().get())
+                : null);
   }
 }
