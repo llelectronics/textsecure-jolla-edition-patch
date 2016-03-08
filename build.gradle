@@ -17,7 +17,7 @@ repositories {
     maven {
         url "https://repo1.maven.org/maven2/"
     }
-    maven { // textdrawable
+    maven {
         url 'https://dl.bintray.com/amulyakhare/maven'
     }
     jcenter()
