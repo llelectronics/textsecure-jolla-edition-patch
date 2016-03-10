@@ -27,7 +27,7 @@ Have something you want to say about LibreSignal or want to be part of the conve
 Help
 ====
 ## Support
-For troubleshooting and questions, please see our [open GitHub Issues](https://github.com/LibreSignal/LibreSignal/issues?q=is%3Aopen+is%3Aissue)!
+For troubleshooting and questions, please see our [GitHub Issues](https://github.com/LibreSignal/LibreSignal/issues)!
 
 ## Documentation
 Looking for documentation? Check out the [original Signal wiki](https://github.com/WhisperSystems/Signal-Android/wiki).
@@ -43,9 +43,5 @@ The U.S. Government Department of Commerce, Bureau of Industry and Security (BIS
 The form and manner of this distribution makes it eligible for export under the License Exception ENC Technology Software Unrestricted (TSU) exception (see the BIS Export Administration Regulations, Section 740.13) for both object code and source code.
 
 ## License
-
-Copyright 2011 Whisper Systems
-
-Copyright 2013-2016 Open Whisper Systems
 
 Licensed under the GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
