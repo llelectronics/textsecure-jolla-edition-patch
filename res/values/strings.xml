@@ -169,7 +169,7 @@
         <item quantity="one">Error while saving attachment to storage!</item>
         <item quantity="other">Error while saving attachments to storage!</item>
     </plurals>
-    <string name="ConversationFragment_success_exclamation">Success!</string>
+    <string name="ConversationFragment_file_saved_successfully">File saved successfully.</string>
     <string name="ConversationFragment_unable_to_write_to_sd_card_exclamation">Unable to write to storage!</string>
     <plurals name="ConversationFragment_saving_n_attachments">
         <item quantity="one">Saving attachment</item>
@@ -259,7 +259,7 @@
     <string name="ExportFragment_exporting_plaintext_to_storage">Exporting plaintext to storage...</string>
     <string name="ExportFragment_error_unable_to_write_to_storage">Error, unable to write to storage.</string>
     <string name="ExportFragment_error_while_writing_to_storage">Error while writing to storage.</string>
-    <string name="ExportFragment_success">Success!</string>
+    <string name="ExportFragment_export_successful">Export successful.</string>
 
     <!-- GcmRefreshJob -->
     <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanent LibreSignal communication failure!</string>
@@ -595,7 +595,7 @@
     <string name="ApplicationMigrationService_import_in_progress">Import in progress</string>
     <string name="ApplicationMigrationService_importing_text_messages">Importing text messages</string>
     <string name="ApplicationMigrationService_import_complete">Import complete</string>
-    <string name="ApplicationMigrationService_Signal_system_database_import_is_complete">LibreSignal system database import is complete.</string>
+    <string name="ApplicationMigrationService_system_database_import_is_complete">System database import is complete.</string>
 
     <!-- KeyCachingService -->
     <string name="KeyCachingService_signal_passphrase_cached">Touch to open.</string>
@@ -907,7 +907,7 @@
     <string name="AndroidManifest__media_overview">All images</string>
     <string name="AndroidManifest__media_overview_named">All images with %1$s</string>
     <string name="AndroidManifest__message_details">Message details</string>
-    <string name="AndroidManifest_manage_linked_devices">Manage linked devices</string>
+    <string name="AndroidManifest__linked_devices">Linked devices</string>
     <string name="AndroidManifest__invite_friends">Invite friends</string>
     <string name="AndroidManifest_archived_conversations">Archived conversations</string>
 
@@ -1023,7 +1023,7 @@
     <string name="preferences__conversation_length_limit">Conversation length limit</string>
     <string name="preferences__trim_all_conversations_now">Trim all conversations now</string>
     <string name="preferences__scan_through_all_conversations_and_enforce_conversation_length_limits">Scan through all conversations and enforce conversation length limits</string>
-    <string name="preferences__devices">Devices</string>
+    <string name="preferences__linked_devices">Linked devices</string>
     <string name="preferences__light_theme">Light</string>
     <string name="preferences__dark_theme">Dark</string>
     <string name="preferences__appearance">Appearance</string>

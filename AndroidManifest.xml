@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="org.thoughtcrime.securesms"
-      android:versionCode="187"
-      android:versionName="3.13.1">
+      android:versionCode="188"
+      android:versionName="3.14.0">
 
     <uses-sdk tools:overrideLibrary="com.amulyakhare.textdrawable,com.astuetz.pagerslidingtabstrip,pl.tajchert.waitingdots,com.h6ah4i.android.multiselectlistpreferencecompat"/>
 
@@ -281,7 +281,7 @@
               android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
      <activity android:name=".DeviceActivity"
-               android:label="@string/AndroidManifest_manage_linked_devices"
+               android:label="@string/AndroidManifest__linked_devices"
                android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
 
     <activity android:name=".LogSubmitActivity"

@@ -28,8 +28,8 @@ import org.thoughtcrime.securesms.dependencies.AxolotlStorageModule;
 import org.thoughtcrime.securesms.dependencies.InjectableType;
 import org.thoughtcrime.securesms.dependencies.RedPhoneCommunicationModule;
 import org.thoughtcrime.securesms.dependencies.TextSecureCommunicationModule;
+import org.thoughtcrime.securesms.jobs.CreateSignedPreKeyJob;
 import org.thoughtcrime.securesms.jobs.GcmRefreshJob;
-import org.thoughtcrime.securesms.jobs.RefreshAttributesJob;
 import org.thoughtcrime.securesms.jobs.persistence.EncryptingJobSerializer;
 import org.thoughtcrime.securesms.jobs.requirements.MasterSecretRequirementProvider;
 import org.thoughtcrime.securesms.jobs.requirements.MediaNetworkRequirementProvider;
@@ -72,6 +72,7 @@ public class ApplicationContext extends Application implements DependencyInjecto
     initializeDependencyInjection();
     initializeJobManager();
     initializeGcmCheck();
+    initializeSignedPreKeyCheck();
   }
 
   @Override
@@ -135,6 +136,12 @@ public class ApplicationContext extends Application implements DependencyInjecto
                TextSecurePreferences.isPushRegistered(this))
     {
       startService(new Intent(this, MessageRetrievalService.class));
+    }
+  }
+
+  private void initializeSignedPreKeyCheck() {
+    if (!TextSecurePreferences.isSignedPreKeyRegistered(this)) {
+      jobManager.add(new CreateSignedPreKeyJob(this));
     }
   }
 
