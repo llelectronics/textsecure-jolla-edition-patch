@@ -136,6 +136,7 @@ android {
     }
 
     defaultConfig {
+        applicationId "org.libresignal"
         minSdkVersion 9
         targetSdkVersion 22
 
