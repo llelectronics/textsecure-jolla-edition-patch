@@ -4,7 +4,7 @@
 
 # Installation
 
-[![F-Droid](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Get_it_on_F-Droid.svg/320px-Get_it_on_F-Droid.svg.png)](https://f-droid.org/repository/browse/?fdid=org.thoughtcrime.securesms "LibreSignal on F-Droid")
+[![F-Droid](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Get_it_on_F-Droid.svg/320px-Get_it_on_F-Droid.svg.png)](https://f-droid.org/repository/browse/?fdid=org.libresignal "LibreSignal on F-Droid")
 
 # WebSocket Support
 
