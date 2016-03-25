@@ -133,10 +133,6 @@ android {
     compileSdkVersion 22
     buildToolsVersion '22.0.1'
 
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
-
     defaultConfig {
         applicationId "org.libresignal"
         minSdkVersion 9
@@ -229,6 +225,7 @@ android {
 
      lintOptions {
         abortOnError false
+        disable 'MissingTranslation'
     }
 }
 
