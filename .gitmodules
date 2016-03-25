@@ -1,5 +1,5 @@
-[submodule "libtextsecure-java"]
-	path = libtextsecure-java
+[submodule "libs/libtextsecure-java"]
+	path = libs/libtextsecure-java
 	url = https://github.com/LibreSignal/libtextsecure-java.git
 [submodule "libs/android-support-v4-preferencefragment"]
 	path = libs/android-support-v4-preferencefragment
