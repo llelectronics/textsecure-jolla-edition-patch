@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compile 'me.leolin:ShortcutBadger:1.1.0'
+    compile project(':libs:ShortcutBadger:ShortcutBadger')
     compile 'se.emilsjolander:stickylistheaders:2.7.0'
     compile 'com.jpardogo.materialtabstrip:library:1.0.9'
     compile project(':libs:org.w3c.dom')
