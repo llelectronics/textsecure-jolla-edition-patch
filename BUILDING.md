@@ -21,7 +21,6 @@ The following steps should help you (re)build LibreSignal from the command line.
     * Android SDK Build Tools
     * SDK Platform (API level 22)
     * Android Support Repository
-    * Google Repository
 4. Create a local.properties file at the root of your source checkout and add the sdk.dir and ndk.dir entries to it.  For example:
 
         sdk.dir=/home/username/android-sdk
