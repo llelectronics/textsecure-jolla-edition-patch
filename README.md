@@ -27,7 +27,7 @@ Have something you want to say about LibreSignal or want to be part of the conve
 Help
 ====
 ## Support
-For troubleshooting and questions, please see our [GitHub Issues](https://github.com/LibreSignal/LibreSignal/issues)!
+For troubleshooting and questions, please read our [FAQ](https://github.com/LibreSignal/LibreSignal/wiki/FAQ) and see our [GitHub Issues](https://github.com/LibreSignal/LibreSignal/issues)!
 
 ## Documentation
 Looking for documentation? Check out the [original Signal wiki](https://github.com/WhisperSystems/Signal-Android/wiki).
