@@ -1,10 +1,8 @@
+#The project was abandoned because of https://github.com/LibreSignal/LibreSignal/issues/37#issuecomment-217211165
+
 # LibreSignal for Android
 
 `LibreSignal` is the **Google-Free** fork of the original `Signal` messaging app for simple private communication with friends. `LibreSignal` uses your phone's data connection (WiFi/3G/4G) to communicate securely, optionally supports plain SMS/MMS to function as a unified messenger, and can also encrypt the stored messages on your phone. Featured on [Kuketz IT-Security Blog](https://www.kuketz-blog.de/?s=LibreSignal).
-
-# Installation
-
-[![F-Droid](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Get_it_on_F-Droid.svg/320px-Get_it_on_F-Droid.svg.png)](https://f-droid.org/repository/browse/?fdid=org.libresignal "LibreSignal on F-Droid")
 
 # WebSocket Support
 For push notifications, Google Cloud Messaging has been completely replaced by WebSocket to directly connect to Open Whisper Systems's server.
