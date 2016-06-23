@@ -219,8 +219,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">在寫入儲存裝置時遇到錯誤。</string>
   <string name="ExportFragment_export_successful">匯出成功。</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">LibreSignal 持續發生傳輸異常！</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal 無法順利註冊為 Google Play Services。LibreSignal 訊息與通話已經停用，請嘗試在設定 &gt; 進階中重新註冊。</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">LibreSignal 持續發生傳輸異常！</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal 無法順利註冊為 Google Play Services。LibreSignal 訊息與通話已經停用，請嘗試在設定 &gt; 進階中重新註冊。</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">新增群組</string>
   <string name="GroupCreateActivity_actionbar_update_title">更新群組</string>
@@ -526,7 +526,7 @@
   <string name="MessageNotifier_media_message">媒體訊息</string>
   <string name="MessageNotifier_reply">回覆</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">當 LibreSignal 鎖定時無法使用快速回覆！</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">當 LibreSignal 鎖定時無法使用快速回覆！</string>
   <string name="QuickResponseService_problem_sending_message">傳送訊息出現問題！</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -963,7 +963,7 @@ LibreSignal 在等待簡訊驗證時超時。</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">您的 LibreSignal 版本已過期</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="other">您的 Signal 版本將於 %d 日內到期，請更新至最新版本。</item>
+    <item quantity="other">您的 LibreSignal 版本將於 %d 日內到期，請更新至最新版本。</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">您的 LibreSignal 版本今日到期，請更新至最新版本。</string>
   <string name="reminder_header_expired_build">您的 LibreSignal 版本已過期！</string>

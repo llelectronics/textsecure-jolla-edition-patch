@@ -236,8 +236,8 @@
   <string name="ExportFragment_error_unable_to_write_to_storage">Erro, não foi possível armazenar na memória do aparelho.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Erro ao gravar na memória do aparelho.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Falha permanente de comunicação do LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">O LibreSignal não conseguiu cadastrar-se com o Google Play Services. Mensagens e chamadas LibreSignal foram desabilitadas; tente recadastrar em Configurações &gt; Avançado.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Falha permanente de comunicação do LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">O LibreSignal não conseguiu cadastrar-se com o Google Play Services. Mensagens e chamadas LibreSignal foram desabilitadas; tente recadastrar em Configurações &gt; Avançado.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Novo grupo</string>
   <string name="GroupCreateActivity_actionbar_update_title">Atualizar grupo</string>
@@ -551,7 +551,7 @@
   <string name="MessageNotifier_media_message">Mensagem multimídia</string>
   <string name="MessageNotifier_reply">Responder</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Resposta rápida não disponível quando o LibreSignal está bloqueado!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Resposta rápida não disponível quando o LibreSignal está bloqueado!</string>
   <string name="QuickResponseService_problem_sending_message">Problema ao enviar mensagem!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -992,8 +992,8 @@ falhou.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Sua versão do LibreSignal está desatualizada</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Sua versão do Signal expirará em um dia. Aperte para atualizar para a versão mais recente.</item>
-    <item quantity="other">Sua versão do Signal expirará em %d dias. Aperte para atualizar para a versão mais recente.</item>
+    <item quantity="one">Sua versão do LibreSignal expirará em um dia. Aperte para atualizar para a versão mais recente.</item>
+    <item quantity="other">Sua versão do LibreSignal expirará em %d dias. Aperte para atualizar para a versão mais recente.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Sua versão do LibreSignal expirará hoje. Aperte para atualizar para a versão mais recente.
 </string>

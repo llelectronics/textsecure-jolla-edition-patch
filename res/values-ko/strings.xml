@@ -218,8 +218,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">저장소에 저장하는 동안 오류 발생</string>
   <string name="ExportFragment_export_successful">대화 내보내기 완료됨</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">영구적인 LibreSignal 통신 실패!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal은 Google Play 서비스에 등록할 수 없습니다. LibreSignal 메시지와 통화는 사용 중지되었으므로 LibreSignal 설정 메뉴에서 재가입해 주세요.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">영구적인 LibreSignal 통신 실패!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal은 Google Play 서비스에 등록할 수 없습니다. LibreSignal 메시지와 통화는 사용 중지되었으므로 LibreSignal 설정 메뉴에서 재가입해 주세요.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">그룹 만들기</string>
   <string name="GroupCreateActivity_actionbar_update_title">그룹 업데이트 하기</string>
@@ -503,7 +503,7 @@
   <string name="MessageNotifier_media_message">미디어 메시지</string>
   <string name="MessageNotifier_reply">답장</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">LibreSignal 잠겨 있는 경우 빠른 응답 사용할 수 없음</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">LibreSignal 잠겨 있는 경우 빠른 응답 사용할 수 없음</string>
   <string name="QuickResponseService_problem_sending_message">메시지 보내지 못함</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -918,7 +918,7 @@
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">설치된 LibreSignal 버전 곧 만료</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="other">%d일 후 설치된 Signal 버전은 만료됩니다. 최신 버전으로 업데이트 하려면 터치하세요.</item>
+    <item quantity="other">%d일 후 설치된 LibreSignal 버전은 만료됩니다. 최신 버전으로 업데이트 하려면 터치하세요.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">오늘 설치된 LibreSignal 버전은 만료됩니다. 최신 버전으로 업데이트 하려면 터치하세요.</string>
   <string name="reminder_header_expired_build">설치된 LibreSignal 버전 만료</string>

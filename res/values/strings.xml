@@ -262,8 +262,8 @@
     <string name="ExportFragment_export_successful">Export successful.</string>
 
     <!-- GcmRefreshJob -->
-    <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanent LibreSignal communication failure!</string>
-    <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal was unable to register with Google Play Services. LibreSignal messages and calls have been disabled, please try re-registering in Settings &gt; Advanced.</string>
+    <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanent LibreSignal communication failure!</string>
+    <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal was unable to register with Google Play Services. LibreSignal messages and calls have been disabled, please try re-registering in Settings &gt; Advanced.</string>
 
     <!-- GroupCreateActivity -->
     <string name="GroupCreateActivity_actionbar_title">New group</string>
@@ -618,7 +618,7 @@
     <string name="MessageNotifier_reply">Reply</string>
 
     <!-- QuickResponseService -->
-    <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Quick response unavailable when LibreSignal is locked!</string>
+    <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Quick response unavailable when LibreSignal is locked!</string>
     <string name="QuickResponseService_problem_sending_message">Problem sending message!</string>
 
     <!-- SingleRecipientNotificationBuilder -->
@@ -1149,8 +1149,8 @@
     <!-- reminder_header -->
     <string name="reminder_header_outdated_build">Your version of LibreSignal is outdated</string>
     <plurals name="reminder_header_outdated_build_details">
-        <item quantity="one">Your version of Signal will expire in 1 day. Tap to update to the most recent version.</item>
-        <item quantity="other">Your version of Signal will expire in %d days. Tap to update to the most recent version.</item>
+        <item quantity="one">Your version of LibreSignal will expire in 1 day. Tap to update to the most recent version.</item>
+        <item quantity="other">Your version of LibreSignal will expire in %d days. Tap to update to the most recent version.</item>
     </plurals>
     <string name="reminder_header_outdated_build_details_today">Your version of LibreSignal will expire today. Tap to update to the most recent version.</string>
     <string name="reminder_header_expired_build">Your version of LibreSignal has expired!</string>

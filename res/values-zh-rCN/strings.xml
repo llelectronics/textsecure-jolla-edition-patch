@@ -221,8 +221,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">在写入存储时遇到错误。</string>
   <string name="ExportFragment_export_successful">导出成功。</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">暗号持续连接失效！</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">暗号无法在 Google Play 服务中注册。暗号消息和呼叫已经被金庸。请尝试在设置 &gt; 高级中重新注册。</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">暗号持续连接失效！</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">暗号无法在 Google Play 服务中注册。暗号消息和呼叫已经被金庸。请尝试在设置 &gt; 高级中重新注册。</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">新群组</string>
   <string name="GroupCreateActivity_actionbar_update_title">更新群组</string>
@@ -522,7 +522,7 @@
   <string name="MessageNotifier_media_message">媒体信息</string>
   <string name="MessageNotifier_reply">回复</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">当暗号处于锁定状态时，快速回复不可用！</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">当暗号处于锁定状态时，快速回复不可用！</string>
   <string name="QuickResponseService_problem_sending_message">发送信息时遇到问题！</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">暗号</string>

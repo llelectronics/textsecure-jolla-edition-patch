@@ -211,7 +211,7 @@ denne kontakt.</string>
   <string name="ExportFragment_error_unable_to_write_to_storage">Fejl - kunne ikke gemme i hukommelsen.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Fejl under gemning i hukommelsen.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanent fejl i LibreSignal-kommunikationen!</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanent fejl i LibreSignal-kommunikationen!</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Ny gruppe</string>
   <string name="GroupCreateActivity_actionbar_update_title">Opdatér gruppe</string>
@@ -510,7 +510,7 @@ Modtog en nøgle-besked for en ugyldig protokol-version.
   <string name="MessageNotifier_media_message">Multimediebesked</string>
   <string name="MessageNotifier_reply">Svar</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Hurtig-svar utilgængelig når LibreSignal er låst!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Hurtig-svar utilgængelig når LibreSignal er låst!</string>
   <string name="QuickResponseService_problem_sending_message">Problem med at sende besked!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -926,8 +926,8 @@ mislykkedes.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Din version af LibreSignal er forældet</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Din version af Signal udløber om 1 dag. Tap for at opdatere til den seneste version.</item>
-    <item quantity="other">Din version af Signal udløber om %d dage. Tap for at opdatere til den seneste version.</item>
+    <item quantity="one">Din version af LibreSignal udløber om 1 dag. Tap for at opdatere til den seneste version.</item>
+    <item quantity="other">Din version af LibreSignal udløber om %d dage. Tap for at opdatere til den seneste version.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Din version af LibreSignal udløber i dag. Tap for at opdatere til den seneste version.</string>
   <string name="reminder_header_expired_build">Din version af LibreSignal er udgået!</string>

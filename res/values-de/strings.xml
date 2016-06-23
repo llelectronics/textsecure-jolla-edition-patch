@@ -232,8 +232,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">Fehler beim Schreiben auf Gerätespeicher.</string>
   <string name="ExportFragment_export_successful">Exportieren erfolgreich abgeschlossen.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Dauerhafter LibreSignal-Kommunikationsfehler!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal konnte nicht für die Google Play-Dienste registriert werden. LibreSignal-Nachrichten und -Anrufe wurden daher deaktiviert. Bitte registrieren Sie LibreSignal im Menü „Einstellungen“ &gt; „Weitere Einstellungen“ erneut.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Dauerhafter LibreSignal-Kommunikationsfehler!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal konnte nicht für die Google Play-Dienste registriert werden. LibreSignal-Nachrichten und -Anrufe wurden daher deaktiviert. Bitte registrieren Sie LibreSignal im Menü „Einstellungen“ &gt; „Weitere Einstellungen“ erneut.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Neue Gruppe</string>
   <string name="GroupCreateActivity_actionbar_update_title">Gruppe bearbeiten</string>
@@ -522,7 +522,7 @@ Schlüsselaustausch-Nachricht für eine ungültige Protokollversion empfangen.</
   <string name="MessageNotifier_media_message">Nachricht mit Medieninhalten</string>
   <string name="MessageNotifier_reply">Antworten</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Schnellantwort nicht verfügbar, solange LibreSignal gesperrt ist!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Schnellantwort nicht verfügbar, solange LibreSignal gesperrt ist!</string>
   <string name="QuickResponseService_problem_sending_message">Problem beim Senden der Nachricht!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -948,8 +948,8 @@ Die Überprüfung der SMS-Bestätigung hat zu lange gedauert.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Ihre Version von LibreSignal ist veraltet</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Ihre Version von Signal wird in 1 Tag ablaufen. Antippen, um auf die neueste Version zu aktualisieren.</item>
-    <item quantity="other">Ihre Version von Signal wird in %d Tagen ablaufen. Antippen, um auf die neueste Version zu aktualisieren.</item>
+    <item quantity="one">Ihre Version von LibreSignal wird in 1 Tag ablaufen. Antippen, um auf die neueste Version zu aktualisieren.</item>
+    <item quantity="other">Ihre Version von LibreSignal wird in %d Tagen ablaufen. Antippen, um auf die neueste Version zu aktualisieren.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Ihre Version von LibreSignal wird heute ablaufen. Antippen, um auf die neueste Version zu aktualisieren.</string>
   <string name="reminder_header_expired_build">Ihre Version von LibreSignal ist abgelaufen!</string>

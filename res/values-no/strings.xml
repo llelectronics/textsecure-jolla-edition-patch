@@ -145,8 +145,8 @@ denne kontakten.</string>
   </plurals>
   <string name="ConversationFragment_save_to_sd_card">Lagre?</string>
   <plurals name="ConversationFragment_saving_n_media_to_storage_warning">
-    <item quantity="one">Lagring av denne mediafilen utenfor Signal vil gi andre apper på enheten din tilgang til det.\n\nFortsett?</item>
-    <item quantity="other">Lagring av alle %1$d mediafiler utenfor Signal vil gi andre apper på enheten din tilgang til det.\n\nFortsett?</item>
+    <item quantity="one">Lagring av denne mediafilen utenfor LibreSignal vil gi andre apper på enheten din tilgang til det.\n\nFortsett?</item>
+    <item quantity="other">Lagring av alle %1$d mediafiler utenfor LibreSignal vil gi andre apper på enheten din tilgang til det.\n\nFortsett?</item>
   </plurals>
   <plurals name="ConversationFragment_error_while_saving_attachments_to_sd_card">
     <item quantity="one">Feil ved lagring av vedlegg!</item>
@@ -232,8 +232,8 @@ denne kontakten.</string>
   <string name="ExportFragment_error_unable_to_write_to_storage">Feil, ute av stand til å skrive til enheten sitt minne.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Feil oppstod under skriving til enheten sitt minne.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanent LibreSignal kommunikasjonsfeil!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal kunne ikke registrere seg med Google Play Tjenester. LibreSignal meldinger og anrop er slått av, vennligst prøv å registrere på nytt i Innstillinger &gt; Avansert.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanent LibreSignal kommunikasjonsfeil!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal kunne ikke registrere seg med Google Play Tjenester. LibreSignal meldinger og anrop er slått av, vennligst prøv å registrere på nytt i Innstillinger &gt; Avansert.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Ny gruppe</string>
   <string name="GroupCreateActivity_actionbar_update_title">Oppdater gruppe</string>
@@ -527,7 +527,7 @@ Mottok nøkkelutvekslingsmelding for ugyldig protokollversjon.</string>
   <string name="MessageNotifier_media_message">Multimediamelding</string>
   <string name="MessageNotifier_reply">Svar</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Rask tilbakemelding ikke tilgjengelig når LibreSignal er låst!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Rask tilbakemelding ikke tilgjengelig når LibreSignal er låst!</string>
   <string name="QuickResponseService_problem_sending_message">Kunne ikke sende melding!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -955,8 +955,8 @@ feilet.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Din versjon av LibreSignal er utdatert</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Din versjon av Signal vil utløpe om 1 dag. Trykk for å oppdatere til siste versjon.</item>
-    <item quantity="other">Din versjon av Signal vil utløpe om %d dager. Trykk for å oppdatere til siste versjon.</item>
+    <item quantity="one">Din versjon av LibreSignal vil utløpe om 1 dag. Trykk for å oppdatere til siste versjon.</item>
+    <item quantity="other">Din versjon av LibreSignal vil utløpe om %d dager. Trykk for å oppdatere til siste versjon.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Din versjon av LibreSignal vil utløpe i dag. Trykk for å oppdatere til siste versjon.</string>
   <string name="reminder_header_expired_build">Din versjon av LibreSignal er utdatert!</string>

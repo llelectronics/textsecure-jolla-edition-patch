@@ -261,8 +261,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">Ошибка при записи в память.</string>
   <string name="ExportFragment_export_successful">Экспортировано успешно.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Неустранимая ошибка соединения!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal не смог зарегистрироваться в службах Google Play. Сообщения и звонки в LibreSignal отключены. Пожалуйста, попробуйте зарегистрироваться снова через меню Наcтройки &gt; Расширенные.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Неустранимая ошибка соединения!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal не смог зарегистрироваться в службах Google Play. Сообщения и звонки в LibreSignal отключены. Пожалуйста, попробуйте зарегистрироваться снова через меню Наcтройки &gt; Расширенные.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Новая группа</string>
   <string name="GroupCreateActivity_actionbar_update_title">Обновить группу</string>
@@ -561,7 +561,7 @@
   <string name="MessageNotifier_media_message">Медиа-сообщение</string>
   <string name="MessageNotifier_reply">Ответить</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Быстрые ответы недоступны, когда LibreSignal заблокирован!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Быстрые ответы недоступны, когда LibreSignal заблокирован!</string>
   <string name="QuickResponseService_problem_sending_message">Проблема при отправке сообщения!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -1003,10 +1003,10 @@ SMS-подтверждения...
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Ваша версия LibreSignal устарела</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Срок действия вашей версии Signal истечёт через 1 день. Нажмите, чтобы обновиться до последней версии.</item>
-    <item quantity="few">Срок действия вашей версии Signal истечёт через %d дня. Нажмите, чтобы обновиться до последней версии.</item>
-    <item quantity="many">Срок действия вашей версии Signal истечёт через %d дней. Нажмите, чтобы обновиться до последней версии.</item>
-    <item quantity="other">Срок действия вашей версии Signal истечёт через %d дней. Нажмите, чтобы обновиться до последней версии.</item>
+    <item quantity="one">Срок действия вашей версии LibreSignal истечёт через 1 день. Нажмите, чтобы обновиться до последней версии.</item>
+    <item quantity="few">Срок действия вашей версии LibreSignal истечёт через %d дня. Нажмите, чтобы обновиться до последней версии.</item>
+    <item quantity="many">Срок действия вашей версии LibreSignal истечёт через %d дней. Нажмите, чтобы обновиться до последней версии.</item>
+    <item quantity="other">Срок действия вашей версии LibreSignal истечёт через %d дней. Нажмите, чтобы обновиться до последней версии.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Срок действия вашей версии LibreSignal истекает сегодня. Нажмите, чтобы обновиться до последней версии.</string>
   <string name="reminder_header_expired_build">Срок действия вашей версии LibreSignal истёк!</string>

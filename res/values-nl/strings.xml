@@ -232,8 +232,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">Fout tijdens het schrijven naar de opslag.</string>
   <string name="ExportFragment_export_successful">Export succesvol.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanente LibreSignal communicatiefout!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal was niet in staat met Google Play services te registreren. LibreSignal berichten en oproepen zijn nu uitgeschakeld, probeer opnieuw te registreren via Instellingen &gt; Geavanceerd.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanente LibreSignal communicatiefout!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal was niet in staat met Google Play services te registreren. LibreSignal berichten en oproepen zijn nu uitgeschakeld, probeer opnieuw te registreren via Instellingen &gt; Geavanceerd.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nieuwe groep</string>
   <string name="GroupCreateActivity_actionbar_update_title">Groep bijwerken</string>
@@ -530,7 +530,7 @@ Sleuteluitwisselingsbericht ontvangen voor een verkeerde protocol-versie.</strin
   <string name="MessageNotifier_media_message">Mediabericht</string>
   <string name="MessageNotifier_reply">Reageren</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Snel reageren niet beschikbaar als LibreSignal vergrendeld is!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Snel reageren niet beschikbaar als LibreSignal vergrendeld is!</string>
   <string name="QuickResponseService_problem_sending_message">Fout bij versturen van bericht!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -962,8 +962,8 @@ LibreSignal heeft te lang moeten wachten op het binnenkomen van de verificatie-S
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Je versie van LibreSignal is verouderd</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Je versie van Signal zal binnen één dag verlopen. Raak aan om te updaten naar de meest recente versie.</item>
-    <item quantity="other">Je versie van Signal zal over %d dagen verlopen. Raak aan om te updaten naar de meest recente versie.</item>
+    <item quantity="one">Je versie van LibreSignal zal binnen één dag verlopen. Raak aan om te updaten naar de meest recente versie.</item>
+    <item quantity="other">Je versie van LibreSignal zal over %d dagen verlopen. Raak aan om te updaten naar de meest recente versie.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Je versie van LibreSignal zal vandaag verlopen. Raak aan om te updaten naar de meest recente versie.</string>
   <string name="reminder_header_expired_build">Je versie van LibreSignal is verlopen!</string>

@@ -236,8 +236,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">שגיאה בעת כתיבה לאחסון.</string>
   <string name="ExportFragment_export_successful">הייצוא הצליח.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">כישלון קבוע בתקשורת סיגנל!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">סיגנל לא הצליח להירשם בשירותי גוגל Play. מסרים ושיחות של סיגנל כובו, נא לנסות להירשם שוב בהגדרות &lt; מתקדם.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">כישלון קבוע בתקשורת סיגנל!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">סיגנל לא הצליח להירשם בשירותי גוגל Play. מסרים ושיחות של סיגנל כובו, נא לנסות להירשם שוב בהגדרות &lt; מתקדם.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">קבוצה חדשה</string>
   <string name="GroupCreateActivity_actionbar_update_title">עדכון קבוצה</string>
@@ -543,7 +543,7 @@
   <string name="MessageNotifier_media_message">מסר מדיה</string>
   <string name="MessageNotifier_reply">להשיב</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">תשובה מהירה אינה זמינה כשסיגנל נעול!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">תשובה מהירה אינה זמינה כשסיגנל נעול!</string>
   <string name="QuickResponseService_problem_sending_message">בעיה בשליחת מסר!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">סיגנל</string>

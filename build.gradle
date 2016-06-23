@@ -134,7 +134,8 @@ android {
     buildToolsVersion '22.0.1'
 
     defaultConfig {
-        applicationId "org.libresignal"
+        //applicationId "org.libresignal"
+        applicationId "org.thoughtcrime.securesms"
         minSdkVersion 9
         targetSdkVersion 22
 
@@ -191,6 +192,10 @@ android {
         dev.initWith(buildTypes.debug)
         dev {
             buildConfigField "boolean", "DEV_BUILD", "true"
+        }
+        sfrelease.initWith(buildTypes.release)
+        sfrelease {
+            buildConfigField "boolean", "DEV_BUILD", "false"
         }
     }
 

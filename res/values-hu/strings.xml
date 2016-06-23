@@ -64,7 +64,7 @@
   <!--ConfirmIdentityDialog-->
   <string name="ConfirmIdentityDialog_the_signature_on_this_key_exchange_is_different">Az
         azonosító kulcs anyaga megváltozott ehhez: %1$s. Ez jelentheti azt, hogy valaki megpróbálja
-        lehallgatni a kommunikációdat, vagy hogy %2$s egyszerűen újratelepítette a LibreSignal-t és most új 
+        lehallgatni a kommunikációdat, vagy hogy %2$s egyszerűen újratelepítette a LibreSignal-t és most új
         azonosító kulcsa van.
     </string>
   <string name="ConfirmIdentityDialog_you_may_wish_to_verify_this_contact">Talán érdemes ellenőrizned
@@ -238,8 +238,8 @@ ezt a névjegyet.
   <string name="ExportFragment_error_while_writing_to_storage">Hiba a tárolóra írás közben.</string>
   <string name="ExportFragment_export_successful">Exportálás sikeres.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Elhúzódó LibreSignal kommunikációs hiba!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">A LibreSignal nem tudott regisztrálni a Google Play Szolgáltatásokkal. A LibreSignal üzenetek és hívások le vannak tiltva, kérlek próbálj meg újraregisztrálni a Beállítások &gt; Haladó-ban.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Elhúzódó LibreSignal kommunikációs hiba!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">A LibreSignal nem tudott regisztrálni a Google Play Szolgáltatásokkal. A LibreSignal üzenetek és hívások le vannak tiltva, kérlek próbálj meg újraregisztrálni a Beállítások &gt; Haladó-ban.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Új csoport</string>
   <string name="GroupCreateActivity_actionbar_update_title">Csoport frissítése</string>
@@ -553,7 +553,7 @@ Kulcs-csere üzenet érkezett érvénytelen protokoll verzióhoz.
   <string name="MessageNotifier_media_message">Média üzenet</string>
   <string name="MessageNotifier_reply">Válasz</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Gyors válasz nem elérhető, amikor a LibreSignal zárolva van!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Gyors válasz nem elérhető, amikor a LibreSignal zárolva van!</string>
   <string name="QuickResponseService_problem_sending_message">Probléma az üzenetküldéskor!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -1010,8 +1010,8 @@ sikertelen.
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">A LibreSignal-od verziója elavult</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">A Signal-od verziója 1 nap múlva lejár. Érints a legfrissebb verzióra történő frissítéshez.</item>
-    <item quantity="other">A Signal-od verziója %d nap múlva lejár. Érints a legfrissebb verzióra történő frissítéshez.</item>
+    <item quantity="one">A LibreSignal-od verziója 1 nap múlva lejár. Érints a legfrissebb verzióra történő frissítéshez.</item>
+    <item quantity="other">A LibreSignal-od verziója %d nap múlva lejár. Érints a legfrissebb verzióra történő frissítéshez.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">A LibreSignal-od verziója ma le fog járni. </string>
   <string name="reminder_header_expired_build">A LibreSignal-od verziója lejárt!</string>

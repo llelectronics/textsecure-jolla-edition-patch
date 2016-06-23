@@ -240,8 +240,8 @@ Vastaanotettu: %4$s</string>
   <string name="ExportFragment_error_while_writing_to_storage">Tallennustilaan kirjoitettaessa sattui virhe.</string>
   <string name="ExportFragment_export_successful">Vienti onnistui.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Pysyvä LibreSignal-yhteysvirhe!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal ei voinut rekisteröityä Google Play Services -palveluun, minkä vuoksi LibreSignal-viestit ja puhelut ovat otettu pois käytöstä. Kokeile rekisteröityä uudelleen LibreSignalin lisäasetuksista.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Pysyvä LibreSignal-yhteysvirhe!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal ei voinut rekisteröityä Google Play Services -palveluun, minkä vuoksi LibreSignal-viestit ja puhelut ovat otettu pois käytöstä. Kokeile rekisteröityä uudelleen LibreSignalin lisäasetuksista.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Uusi ryhmä</string>
   <string name="GroupCreateActivity_actionbar_update_title">Päivitä ryhmää</string>
@@ -543,7 +543,7 @@ Vastaanotetiin avaintenvaihtoviesti, joka kuuluu väärälle protokollaversiolle
   <string name="MessageNotifier_media_message">Mediaviesti</string>
   <string name="MessageNotifier_reply">Vastaa</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Pikavastaus ei toimi, kun LibreSignal on lukittu!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Pikavastaus ei toimi, kun LibreSignal on lukittu!</string>
   <string name="QuickResponseService_problem_sending_message">Ongelma viestin lähettämisessä!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -973,8 +973,8 @@ LibreSignal ei saanut vahvistustekstiviestiä odotusajan sisällä.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Käyttämäsi LibreSignalin versio on vanhentunut!</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Käyttämäsi Signalin versio vanhenee 1 päivässä. Napsauta päivittääksesi viimeisimpään versioon.</item>
-    <item quantity="other">Käyttämäsi Signalin versio vanhenee %d päivässä. Napsauta päivittääksesi viimeisimpään versioon.</item>
+    <item quantity="one">Käyttämäsi LibreSignalin versio vanhenee 1 päivässä. Napsauta päivittääksesi viimeisimpään versioon.</item>
+    <item quantity="other">Käyttämäsi LibreSignalin versio vanhenee %d päivässä. Napsauta päivittääksesi viimeisimpään versioon.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Käyttämäsi LibreSignalin versio vanhenee tänään. Napsauta päivittääksesi viimeisimpään versioon.</string>
   <string name="reminder_header_expired_build">Käyttämäsi LibreSignalin versio on vanhentunut!</string>

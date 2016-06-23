@@ -249,8 +249,8 @@ ovaj kontakt.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Greška prilikom pisanja na disk.</string>
   <string name="ExportFragment_export_successful">Izvoz uspješan.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Trajna greška u LibreSignal komunikaciji!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal se nije uspješno registrirao na Google Play Services. LibreSignal poruke i pozivi su onemogućeni, pokušajte se ponovno registrirati kroz Postavke &gt; Napredno.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Trajna greška u LibreSignal komunikaciji!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal se nije uspješno registrirao na Google Play Services. LibreSignal poruke i pozivi su onemogućeni, pokušajte se ponovno registrirati kroz Postavke &gt; Napredno.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nova grupa</string>
   <string name="GroupCreateActivity_actionbar_update_title">Ažuriraj grupu</string>
@@ -557,7 +557,7 @@ Primljena poruka razmjene ključeva za pogrešnu inačicu protokola.</string>
   <string name="MessageNotifier_media_message">Multimedijalna poruka</string>
   <string name="MessageNotifier_reply">Odgovori</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Brzi odgovor nije dostupan kada je LibreSignal zaključan!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Brzi odgovor nije dostupan kada je LibreSignal zaključan!</string>
   <string name="QuickResponseService_problem_sending_message">Greška prilikom slanja poruke!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -998,9 +998,9 @@ neuspješno.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Vaša LibreSignal inačica je istekla!</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Vaša Signal inačica će isteći za 1 dan. Dodirnite za ažuriranje na najnoviju inačicu.</item>
-    <item quantity="few">Vaša Signal inačica će isteći za %d dana. Dodirnite za ažuriranje na najnoviju inačicu.</item>
-    <item quantity="other">Vaša Signal inačica će isteći za %d dana. Dodirnite za ažuriranje na najnoviju inačicu.</item>
+    <item quantity="one">Vaša LibreSignal inačica će isteći za 1 dan. Dodirnite za ažuriranje na najnoviju inačicu.</item>
+    <item quantity="few">Vaša LibreSignal inačica će isteći za %d dana. Dodirnite za ažuriranje na najnoviju inačicu.</item>
+    <item quantity="other">Vaša LibreSignal inačica će isteći za %d dana. Dodirnite za ažuriranje na najnoviju inačicu.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Vaša će verzija LibreSignala isteći danas. Dodirnite za ažuriranje na najnoviju inačicu.</string>
   <string name="reminder_header_expired_build">Vaša je verzija LibreSignala istekla!</string>

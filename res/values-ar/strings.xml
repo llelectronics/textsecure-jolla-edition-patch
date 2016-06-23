@@ -254,8 +254,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">e
 خطأ أثناء الكتابة على بطاقة الذاكرة.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">فشل دائما في اتصال سيجنال!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">سيجنال لم يتمكن من التسجيل مع خدمات جوجل بلاي، وتم تعطيل رسائل ومكالمات سيجنال. رجاء محاولة إعادة التسجيل عبر قائمة الإعدادات بالتطبيق ثم اختيار متقدم.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">فشل دائما في اتصال سيجنال!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">سيجنال لم يتمكن من التسجيل مع خدمات جوجل بلاي، وتم تعطيل رسائل ومكالمات سيجنال. رجاء محاولة إعادة التسجيل عبر قائمة الإعدادات بالتطبيق ثم اختيار متقدم.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">مجموعة جديدة</string>
   <string name="GroupCreateActivity_actionbar_update_title">تحديث المجموعة</string>
@@ -549,7 +549,7 @@
   <string name="MessageNotifier_media_message">رسالة وسائط متعددة</string>
   <string name="MessageNotifier_reply">رَدّ</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">الردود السريعة غير متاحة عند قفل سيجنال!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">الردود السريعة غير متاحة عند قفل سيجنال!</string>
   <string name="QuickResponseService_problem_sending_message">مشكلة في الإرسال!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">سيجنال</string>

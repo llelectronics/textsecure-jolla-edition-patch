@@ -199,7 +199,7 @@
   <string name="ExportFragment_exporting_plaintext_to_storage">ಸಂಗ್ರಹಕ್ಕೆ ಸರಳಪಠ್ಯವನ್ನು ರಫ್ತು ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
   <string name="ExportFragment_error_while_writing_to_storage">ಸಂಗ್ರಹಕ್ಕೆ ಉಳಿಸುವಾಗ ತೊಡಕಾಗಿದೆ!</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">ಸಿಗ್ನಲ್‌ಗೆ ಶಾಶ್ವತವಾದ ಸಂಪರ್ಕ ವೈಫಲ್ಯ!</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">ಸಿಗ್ನಲ್‌ಗೆ ಶಾಶ್ವತವಾದ ಸಂಪರ್ಕ ವೈಫಲ್ಯ!</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">ಹೋಸ ಸಮೂಹ </string>
   <string name="GroupCreateActivity_actionbar_update_title">ಸಮೂಹವನ್ನು ನವೀಕರಿಸಿ</string>

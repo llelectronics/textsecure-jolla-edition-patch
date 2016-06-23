@@ -249,8 +249,8 @@ această persoană.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Eroare în timpul scrierii pe spațiul de stocare.</string>
   <string name="ExportFragment_export_successful">Exportarea a fost făcută cu succes.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Eroare permanentă de comunicare cu LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal nu s-a putut înregistra la Google Play Services. Mesajele și apelurile LibreSignal au fost dezactivate, te rog încearcă să te înregistrezi din nou din meniul Setări &gt; Avansat.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Eroare permanentă de comunicare cu LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal nu s-a putut înregistra la Google Play Services. Mesajele și apelurile LibreSignal au fost dezactivate, te rog încearcă să te înregistrezi din nou din meniul Setări &gt; Avansat.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Grup nou</string>
   <string name="GroupCreateActivity_actionbar_update_title">Actualizează grup</string>
@@ -554,7 +554,7 @@ Am primit mesajul conform căruia schimbul de chei a avut loc pentru o versiune 
   <string name="MessageNotifier_media_message">Mesaj media</string>
   <string name="MessageNotifier_reply">Răspunde</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Răspunsul rapid nu este disponibil cât timp LibreSignal este blocat!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Răspunsul rapid nu este disponibil cât timp LibreSignal este blocat!</string>
   <string name="QuickResponseService_problem_sending_message">Problemă la trimiterea mesajului!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -712,7 +712,7 @@ sunt:</string>
   <string name="registration_problems__some_third_party_text_messaging_clients_such_as_handcent">
 Unele aplicații terțe de mesagerie text, cum ar fi Handcent sau GoSMS,  se comportă sub standard 
 și interceptează toate mesajele SMS primite. Verifică dacă ai primit un mesaj text care 
-începe cu \"Codul tău de verificare LibreSignal:\", caz în care va trebui să configurezi cealaltă 
+începe cu \"Codul tău de verificare LibreSignal:\", caz în care va trebui să configurezi cealaltă
 aplicație de mesagerie să permită trecerea mesajelor text mai departe.</string>
   <string name="registration_problems__incorrect_number">Număr incorect.</string>
   <string name="registration_problems__please_checkt_to_make_sure_you_entered_your_number_correctly">
@@ -1005,9 +1005,9 @@ SMS a eșuat.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Versiunea ta de LibreSignal este veche</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Versiunea ta de Signal va expira într-o zi. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
-    <item quantity="few">Versiunea ta de Signal va expira în %d zile. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
-    <item quantity="other">Versiunea ta de Signal va expira în %d zile. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
+    <item quantity="one">Versiunea ta de LibreSignal va expira într-o zi. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
+    <item quantity="few">Versiunea ta de LibreSignal va expira în %d zile. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
+    <item quantity="other">Versiunea ta de LibreSignal va expira în %d zile. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Versiunea ta de LibreSignal va expira azi. Apasă pentru a actualiza aplicația la versiunea cea mai recentă.</string>
   <string name="reminder_header_expired_build">Versiunea ta de LibreSignal a expirat!</string>

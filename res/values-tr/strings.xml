@@ -218,8 +218,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">Depolama alanına yazılırken hata.</string>
   <string name="ExportFragment_export_successful">Dışa aktarma başarılı.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Kalıcı LibreSignal haberleşme hatası!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal Google Play Servislerine kayıt olamadı. LibreSignal mesajları ve aramaları devre dışı bırakıldı, Lütfen Ayarlar &gt; Gelişmiş kısmından tekrardan kayıt olmayı deneyin.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Kalıcı LibreSignal haberleşme hatası!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal Google Play Servislerine kayıt olamadı. LibreSignal mesajları ve aramaları devre dışı bırakıldı, Lütfen Ayarlar &gt; Gelişmiş kısmından tekrardan kayıt olmayı deneyin.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Yeni grup</string>
   <string name="GroupCreateActivity_actionbar_update_title">Grubu güncelle</string>
@@ -514,7 +514,7 @@ Geçersiz protokol sürümünde anahtar değişim mesajı alındı.</string>
   <string name="MessageNotifier_media_message">Medya mesajı</string>
   <string name="MessageNotifier_reply">Cevapla</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">LibreSignal kilitlendiğinde hızlı cevap kullanılamaz!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">LibreSignal kilitlendiğinde hızlı cevap kullanılamaz!</string>
   <string name="QuickResponseService_problem_sending_message">Mesaj gönderilirken hata!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -947,7 +947,7 @@ başarısız.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">LibreSignal sürümünüz eski kalmış</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="other">Signal sürümünüz %d gün içinde kullanım dışı kalacak. En yeni sürüme güncellemek için dokunun.</item>
+    <item quantity="other">LibreSignal sürümünüz %d gün içinde kullanım dışı kalacak. En yeni sürüme güncellemek için dokunun.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">LibreSignal sürümünüz bugün kullanım dışı kalacak. En yeni sürüme güncellemek için dokunun.</string>
   <string name="reminder_header_expired_build">LibreSignal sürümünüz kullanım dışı kaldı!</string>

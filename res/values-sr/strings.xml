@@ -249,8 +249,8 @@
   <string name="ExportFragment_error_unable_to_write_to_storage">Грешка, не могу да уписујем у складиште.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Грешка при упису у складиште.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Трајни неуспех комуникације Сигнала!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Сигнал није успео да се пријави на Гуглов Плеј сервис. Комуникација преко канала података је онемогућена, покушајте поново да се пријавите преко Поставке &gt; Напредно.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Трајни неуспех комуникације Сигнала!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">Сигнал није успео да се пријави на Гуглов Плеј сервис. Комуникација преко канала података је онемогућена, покушајте поново да се пријавите преко Поставке &gt; Напредно.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Нова група</string>
   <string name="GroupCreateActivity_actionbar_update_title">Ажурирај групу</string>
@@ -556,7 +556,7 @@
   <string name="MessageNotifier_media_message">Мултимедијална порука</string>
   <string name="MessageNotifier_reply">Одговори</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Брзи одговор није доступан ако је Сигнал закључан!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Брзи одговор није доступан ако је Сигнал закључан!</string>
   <string name="QuickResponseService_problem_sending_message">Проблем са слањем поруке!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">Сигнал</string>

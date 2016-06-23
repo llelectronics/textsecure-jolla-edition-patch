@@ -231,8 +231,8 @@ vérifier ce contact.</string>
   <string name="ExportFragment_error_unable_to_write_to_storage">Erreur, écriture sur mémoire impossible.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Erreur lors de l\'enregistrement dans l\'espace de stockage.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Échec de communication LibreSignal permanent !</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Les appels et messages LibreSignal ont été désactivés car LibreSignal n\'a pas pu s\'enregistrer auprès de Google Play Services. Veuillez essayer de vous enregistrer à nouveau à partir du menu Paramètres &gt; Avancé.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Échec de communication LibreSignal permanent !</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">Les appels et messages LibreSignal ont été désactivés car LibreSignal n\'a pas pu s\'enregistrer auprès de Google Play Services. Veuillez essayer de vous enregistrer à nouveau à partir du menu Paramètres &gt; Avancé.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nouveau groupe</string>
   <string name="GroupCreateActivity_actionbar_update_title">Mettre à jour le groupe</string>
@@ -530,7 +530,7 @@ Réception d\'un message d\'échange de clés pour une version invalide du proto
   <string name="MessageNotifier_media_message">Message média</string>
   <string name="MessageNotifier_reply">Répondre</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">La réponse rapide n\'est pas disponible lorsque LibreSignal est verrouillé !</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">La réponse rapide n\'est pas disponible lorsque LibreSignal est verrouillé !</string>
   <string name="QuickResponseService_problem_sending_message">Erreur lors de l\'envoi du message !</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -965,8 +965,8 @@ par SMS.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Votre version de LibreSignal est trop ancienne</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Votre version de Signal va expirer dans 1 jour. Appuyer pour mettre à jour vers la version la plus récente.</item>
-    <item quantity="other">Votre version de Signal va expirer dans %d jours. Appuyer pour mettre à jour vers la version la plus récente.</item>
+    <item quantity="one">Votre version de LibreSignal va expirer dans 1 jour. Appuyer pour mettre à jour vers la version la plus récente.</item>
+    <item quantity="other">Votre version de LibreSignal va expirer dans %d jours. Appuyer pour mettre à jour vers la version la plus récente.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Votre version de LibreSignal va expirer aujourd\'hui. Appuyer pour mettre à jour vers la version la plus récente.</string>
   <string name="reminder_header_expired_build">Votre version de LibreSignal a expirée!</string>

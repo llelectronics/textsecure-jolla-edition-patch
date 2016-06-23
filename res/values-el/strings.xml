@@ -239,8 +239,8 @@
   <string name="ExportFragment_error_unable_to_write_to_storage">Σφάλμα, δεν μπόρεσε να γίνει εγγραφή στον αποθηκευτικό χώρο.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Σφάλμα κατά την εγγραφή στον αποθηκευτικό χώρο.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Μόνιμη αποτυχία επικοινωνίας του LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Το LibreSignal δεν μπόρεσε να εγγραφτεί στις Υπηρεσίες Google Play. Τα μηνύματα και οι κλήσεις του LibreSignal έχουν απενεργοποιηθεί. Παρακαλώ προσπάθησε να επανεγγραφτείς στις Ρυθμίσεις &gt; Προχωρημένες Ρυθμίσεις.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Μόνιμη αποτυχία επικοινωνίας του LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">Το LibreSignal δεν μπόρεσε να εγγραφτεί στις Υπηρεσίες Google Play. Τα μηνύματα και οι κλήσεις του LibreSignal έχουν απενεργοποιηθεί. Παρακαλώ προσπάθησε να επανεγγραφτείς στις Ρυθμίσεις &gt; Προχωρημένες Ρυθμίσεις.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Νέα ομάδα</string>
   <string name="GroupCreateActivity_actionbar_update_title">Ενημέρωση ομάδας</string>
@@ -543,7 +543,7 @@
   <string name="MessageNotifier_media_message">Μήνυμα πολυμέσων</string>
   <string name="MessageNotifier_reply">Απάντηση</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Η γρήγορη απάντηση δεν είναι διαθέσιμη όταν το LibreSignal είναι κλειδωμένο!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Η γρήγορη απάντηση δεν είναι διαθέσιμη όταν το LibreSignal είναι κλειδωμένο!</string>
   <string name="QuickResponseService_problem_sending_message">Πρόβλημα με την αποστολή μηνύματος!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -727,7 +727,7 @@
 σύνδεση στο δίκτυο.
     </string>
   <string name="registration_progress_activity__your_device_needs_network_connectivity">Η συσκευή
-σου πρέπει να είναι συνδεδεμένη στο δίκτυο για να χρησιμοποιήσεις αυτό το χαρακτηριστικό του LibreSignal. 
+σου πρέπει να είναι συνδεδεμένη στο δίκτυο για να χρησιμοποιήσεις αυτό το χαρακτηριστικό του LibreSignal.
 Επιβεβαίωσε ότι είναι συνδεδεμένη σε Wi-Fi ή 3G.</string>
   <string name="registration_progress_activity__restrictive_firewall">Περιοριστικό τείχος προστασίας.</string>
   <string name="registration_progress_activity__if_you_are_connected_via_wifi_its_possible_that_there_is_a_firewall">
@@ -987,8 +987,8 @@
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Η έκδοση του LibreSignal σου είναι παρωχημένη</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Η έκδοση του Signal σου θα λήξει σε 1 ημέρα. Πάτα για να αναβαθμίσεις στην πιο πρόσφατη έκδοση.</item>
-    <item quantity="other">Η έκδοση του Signal σου θα λήξει σε %d ημέρες. Πάτα για να αναβαθμίσεις στην πιο πρόσφατη έκδοση.</item>
+    <item quantity="one">Η έκδοση του LibreSignal σου θα λήξει σε 1 ημέρα. Πάτα για να αναβαθμίσεις στην πιο πρόσφατη έκδοση.</item>
+    <item quantity="other">Η έκδοση του LibreSignal σου θα λήξει σε %d ημέρες. Πάτα για να αναβαθμίσεις στην πιο πρόσφατη έκδοση.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Η έκδοση του LibreSignal σου θα λήξει σήμερα. Πάτα για να αναβαθμίσεις στην πιο πρόσφατη έκδοση.</string>
   <string name="reminder_header_expired_build">Η έκδοση του LibreSignal σου έχει λήξει!</string>

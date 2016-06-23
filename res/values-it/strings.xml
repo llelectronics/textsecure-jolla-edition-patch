@@ -233,8 +233,8 @@ questo contatto.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Errore durante la scrittura in memoria.</string>
   <string name="ExportFragment_export_successful">Esportazione completata.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Comunicazione LibreSignal fallita definitivamente!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal è stato impossibilitato a registrarsi con i sevizi di Google Play.
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Comunicazione LibreSignal fallita definitivamente!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal è stato impossibilitato a registrarsi con i sevizi di Google Play.
 I suoi messagi e le chiamate sono state disabilitate, si prega di provare e ri-registrare in Impostazioni &gt; Avanzate.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nuovo gruppo</string>
@@ -536,7 +536,7 @@ Ricevuto un messaggio di scambio chiavi per una versione di protocollo non valid
   <string name="MessageNotifier_media_message">Messaggio multimediale</string>
   <string name="MessageNotifier_reply">Rispondi</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Risposta veloce non disponibile quando LibreSignal è bloccato!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Risposta veloce non disponibile quando LibreSignal è bloccato!</string>
   <string name="QuickResponseService_problem_sending_message">Problema nell\'invio del messaggio!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -979,8 +979,8 @@ non riuscita.
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">La tua versione di LibreSignal è vecchia</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">La tua versione di Signal scadrà tra 1 giorno. Premi per aggiornare alla versione più recente.</item>
-    <item quantity="other">La tua versione di Signal scadrà tra %d giorni. Premi per aggiornare alla versione più recente.</item>
+    <item quantity="one">La tua versione di LibreSignal scadrà tra 1 giorno. Premi per aggiornare alla versione più recente.</item>
+    <item quantity="other">La tua versione di LibreSignal scadrà tra %d giorni. Premi per aggiornare alla versione più recente.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">La tua versione di LibreSignal scade oggi. Premi per aggiornare alla versione più recente.</string>
   <string name="reminder_header_expired_build">La tua versione di LibreSignal è scaduta!</string>

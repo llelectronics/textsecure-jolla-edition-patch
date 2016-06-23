@@ -258,8 +258,8 @@
   <string name="ExportFragment_error_unable_to_write_to_storage">Napaka - ne morem shranjevati v sistemsko shrambo!</string>
   <string name="ExportFragment_error_while_writing_to_storage">Napaka pri zapisovanju.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Trajna okvara pri komunikaciji aplikacije LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Registracija z Google Play Services ni bila uspešna. Podatkovna komunikacija je izklopljena, prosimo poskusite s ponovno registracijo v meniju Nastavive &gt; Napredno.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Trajna okvara pri komunikaciji aplikacije LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">Registracija z Google Play Services ni bila uspešna. Podatkovna komunikacija je izklopljena, prosimo poskusite s ponovno registracijo v meniju Nastavive &gt; Napredno.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nova skupina</string>
   <string name="GroupCreateActivity_actionbar_update_title">Posodobi skupino</string>
@@ -554,7 +554,7 @@ Prejeto sporočilo za izmenjavo ključev za napačno različico protokola.</stri
   <string name="MessageNotifier_media_message">Večpredstavno sporočilo</string>
   <string name="MessageNotifier_reply">Odgovor</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Hiter odziv ni mogoč kadar je aplikacija LibreSignal zaklenjena!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Hiter odziv ni mogoč kadar je aplikacija LibreSignal zaklenjena!</string>
   <string name="QuickResponseService_problem_sending_message">Težava pri pošiljanju sporočila</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -988,10 +988,10 @@ bila uspešna.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Vaša različica aplikacije LibreSignal je zastarela</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Vaša različica aplikacije Signal bo jutri potekla. Tapnite za posodobitev na zadnjo različico.</item>
-    <item quantity="two">Vaša različica aplikacije Signal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
-    <item quantity="few">Vaša različica aplikacije Signal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
-    <item quantity="other">Vaša različica aplikacije Signal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
+    <item quantity="one">Vaša različica aplikacije LibreSignal bo jutri potekla. Tapnite za posodobitev na zadnjo različico.</item>
+    <item quantity="two">Vaša različica aplikacije LibreSignal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
+    <item quantity="few">Vaša različica aplikacije LibreSignal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
+    <item quantity="other">Vaša različica aplikacije LibreSignal bo potekla v %d dneh. Tapnite za posodobitev na zadnjo različico.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Pričujoča različica aplikacije LibreSignal bo danes potekla. Tapnite za nadgradnjo na zadnjo različico.</string>
   <string name="reminder_header_expired_build">Vaša različica aplikacije LibreSignal je potekla!</string>

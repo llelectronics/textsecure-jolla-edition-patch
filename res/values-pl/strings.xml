@@ -238,8 +238,8 @@ ten kontakt.
   <string name="ExportFragment_error_while_writing_to_storage">Wystąpił błąd w czasie próby zapisu na dysku.</string>
   <string name="ExportFragment_export_successful">Eksport zakończony pomyślnie.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanentny błąd komunikacji LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal nie był w stanie zarejestrować się z Google Play Services. Wiadomości i połączenia LibreSignal zostały wyłączone. Proszę spróbuj ponownie zarejestrować się poprzez pójście do Ustawienia &gt; Zaawansowane.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanentny błąd komunikacji LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal nie był w stanie zarejestrować się z Google Play Services. Wiadomości i połączenia LibreSignal zostały wyłączone. Proszę spróbuj ponownie zarejestrować się poprzez pójście do Ustawienia &gt; Zaawansowane.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nowa grupa</string>
   <string name="GroupCreateActivity_actionbar_update_title">Aktualizuj grupę</string>
@@ -538,7 +538,7 @@ Otrzymano wiadomość wymiany klucz dla niepoprawnej wersji protokołu.</string>
   <string name="MessageNotifier_media_message">Wiadomość multimedialna</string>
   <string name="MessageNotifier_reply">Odpowiedź</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Szybka odpowiedź jest niedostępna kiedy LibreSignal jest zablokowany!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Szybka odpowiedź jest niedostępna kiedy LibreSignal jest zablokowany!</string>
   <string name="QuickResponseService_problem_sending_message">Wystąpił błąd przy wysyłaniu wiadomości!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -966,9 +966,9 @@ Upłynął czas oczekiwania na wiadomość weryfikacyjną SMS.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Twoja wersja LibreSignal jest nieaktualna.</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Twoja wersja Signal wygaśnie za 1 dzień. Dotknij, aby zaktualizować do najnowszej wersji.</item>
-    <item quantity="few">Twoja wersja Signal wygaśnie za %d dni. Dotknij, aby zaktualizować do najnowszej wersji.</item>
-    <item quantity="other">Twoja wersja Signal wygaśnie za %d dni. Dotknij, aby zaktualizować do najnowszej wersji.</item>
+    <item quantity="one">Twoja wersja LibreSignal wygaśnie za 1 dzień. Dotknij, aby zaktualizować do najnowszej wersji.</item>
+    <item quantity="few">Twoja wersja LibreSignal wygaśnie za %d dni. Dotknij, aby zaktualizować do najnowszej wersji.</item>
+    <item quantity="other">Twoja wersja LibreSignal wygaśnie za %d dni. Dotknij, aby zaktualizować do najnowszej wersji.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Twoja wersja LibreSignal dzisiaj będzie już nieaktualna. Dotknij, aby zaktualizować do najnowszej wersji.</string>
   <string name="reminder_header_expired_build">Twoja wersja LibreSignal jest nieaktualna!</string>

@@ -213,8 +213,8 @@ que %2$s reinstalou o LibreSignal e tem agora uma nova chave de identidade.
   <string name="ExportFragment_error_unable_to_write_to_storage">Erro, não é possível escrever para o armazenamento local.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Erro ao escrever para o armazenamento local.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Falha de comunicação LibreSignal permanente!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal não se conseguiu registar com os Serviços Google Play. As mensagens e chamadas LibreSignal estão desabilitadas. Por favor tente registar-se novamente em Definições &gt; Avançadas.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Falha de comunicação LibreSignal permanente!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal não se conseguiu registar com os Serviços Google Play. As mensagens e chamadas LibreSignal estão desabilitadas. Por favor tente registar-se novamente em Definições &gt; Avançadas.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Grupo novo</string>
   <string name="GroupCreateActivity_actionbar_update_title">Actualizar grupo</string>
@@ -513,7 +513,7 @@ chave corrompida.
   <string name="MessageNotifier_media_message">Mensagem media</string>
   <string name="MessageNotifier_reply">Responder</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">A resposta rápida encontra-se indisponível quando o LibreSignal está bloqueado!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">A resposta rápida encontra-se indisponível quando o LibreSignal está bloqueado!</string>
   <string name="QuickResponseService_problem_sending_message">Problema no envio da mensagem!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -955,8 +955,8 @@ falhou.
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">A sua versão de LibreSignal está desactualizada</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">A sua versão de Signal vai expirar dentro de 1 dia. Toque para actualizar para a versão mais recente.</item>
-    <item quantity="other">A sua versão de Signal vai expirar dentro de %d dias. Toque para actualizar para a versão mais recente.</item>
+    <item quantity="one">A sua versão de LibreSignal vai expirar dentro de 1 dia. Toque para actualizar para a versão mais recente.</item>
+    <item quantity="other">A sua versão de LibreSignal vai expirar dentro de %d dias. Toque para actualizar para a versão mais recente.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">A sua versão de LibreSignal vai expirar hoje. Toque para actualizar para a versão mais recente.</string>
   <string name="reminder_header_expired_build">A sua versão de LibreSignal expirou!</string>

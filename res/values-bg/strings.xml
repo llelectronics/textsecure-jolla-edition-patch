@@ -231,8 +231,8 @@
   <string name="ExportFragment_error_unable_to_write_to_storage">Грешка, неуспешен опит за запис на външната памет.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Грешка при записване на външната памет.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Перманентна LibreSignal комуникационна грешка!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal не успя да се регистрира с Google Play Services. LibreSignal съообщения и разговори са деактивирани, моля пререгистрирайте през менюто Настройки &gt; Допълнителние.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Перманентна LibreSignal комуникационна грешка!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal не успя да се регистрира с Google Play Services. LibreSignal съообщения и разговори са деактивирани, моля пререгистрирайте през менюто Настройки &gt; Допълнителние.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Нова група</string>
   <string name="GroupCreateActivity_actionbar_update_title">Промени група</string>
@@ -535,7 +535,7 @@ SMS-те от системния архив в LibreSignal. Ако вече ст
   <string name="MessageNotifier_media_message">Медийно съобщение</string>
   <string name="MessageNotifier_reply">Отговори</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Бърз отговор не е възможен, когато LibreSignal е заключен!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Бърз отговор не е възможен, когато LibreSignal е заключен!</string>
   <string name="QuickResponseService_problem_sending_message">Проблем при изпрашане на съобщение!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -701,7 +701,7 @@ LibreSignal не работи с Google Voice номера.</string>
   <!--registration_progress_activity-->
   <string name="registration_progress_activity__voice_verification">Гласово потвърждение</string>
   <string name="registration_progress_activity__signal_can_also_call_you_to_verify_your_number">
-LibreSignal може да ти се обади, за да потвърди номера ти. Натисни \'Обади ми се\' и въведи 6 цифрения код, 
+LibreSignal може да ти се обади, за да потвърди номера ти. Натисни \'Обади ми се\' и въведи 6 цифрения код,
 който чуваш, долу.</string>
   <string name="registration_progress_activity__verify">Потвърди</string>
   <string name="registration_progress_activity__call_me">Обади ми се</string>
@@ -972,8 +972,8 @@ LibreSignal чака твърде дълго за SMS потвърждение.<
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Вашата версия на LibreSignal е стара</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Вашата версия на Signal ще изтече след 1 ден. Натиснете, за да обновите до най-новата версия.</item>
-    <item quantity="other">Вашата версия на Signal ще изтече след %d дена. Натиснете, за да обновите до най-новата версия.</item>
+    <item quantity="one">Вашата версия на LibreSignal ще изтече след 1 ден. Натиснете, за да обновите до най-новата версия.</item>
+    <item quantity="other">Вашата версия на LibreSignal ще изтече след %d дена. Натиснете, за да обновите до най-новата версия.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Вашата версия на LibreSignal ще изтече днес. Натиснете, за да обновите до най-новата версия.</string>
   <string name="reminder_header_expired_build">Вашата версоя ма LibreSignal е изтекла!</string>

@@ -246,8 +246,8 @@ kontakt</string>
   <string name="ExportFragment_error_unable_to_write_to_storage">Chyba, nelze zapisovat do úložiště.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Chyba během zápisu do úložiště</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Trvalá chyba komunikace LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">Sginal se nemůže registrovat k službě Google Play. Zprávy a volání jsou proto zakázány: Prosím zkuste se znovu registrovat v menu Nastavení &gt; Rozšířené.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Trvalá chyba komunikace LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">Sginal se nemůže registrovat k službě Google Play. Zprávy a volání jsou proto zakázány: Prosím zkuste se znovu registrovat v menu Nastavení &gt; Rozšířené.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Nová skupina</string>
   <string name="GroupCreateActivity_actionbar_update_title">Upravit skupinu</string>
@@ -542,7 +542,7 @@ Obdržen požadavek na výměnu klíčů pro neplatnou verzi protokolu.</string>
   <string name="MessageNotifier_media_message">Multimediální zpráva</string>
   <string name="MessageNotifier_reply">Odpověď</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Rychlá dopověď není dostupná pokud je LibreSignal uzamčen!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Rychlá dopověď není dostupná pokud je LibreSignal uzamčen!</string>
   <string name="QuickResponseService_problem_sending_message">Problém při odesílání zprávy!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -980,9 +980,9 @@ LibreSignal se nedočkal přijetí ověřovací SMS. </string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Vaše verze aplikace LibreSignal je zastaralá</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Platnost vaší verze aplikace Signal skončí za 1 den. Dotykem aktualizujte na nejnovější verzi.</item>
-    <item quantity="few">Platnost vaší verze aplikace Signal skončí za %d dny. Dotykem aktualizujte na nejnovější verzi.</item>
-    <item quantity="other">Platnost vaší verze aplikace Signal skončí za %d dnů. Dotykem aktualizujte na nejnovější verzi.</item>
+    <item quantity="one">Platnost vaší verze aplikace LibreSignal skončí za 1 den. Dotykem aktualizujte na nejnovější verzi.</item>
+    <item quantity="few">Platnost vaší verze aplikace LibreSignal skončí za %d dny. Dotykem aktualizujte na nejnovější verzi.</item>
+    <item quantity="other">Platnost vaší verze aplikace LibreSignal skončí za %d dnů. Dotykem aktualizujte na nejnovější verzi.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Platnost vaší verze aplikace LibreSignal skončí dnes. Dotykem aktualizujte na nejnovější verzi.</string>
   <string name="reminder_header_expired_build">Platnost vaší verze aplikace LibreSignal vypršela!</string>

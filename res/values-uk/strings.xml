@@ -250,8 +250,8 @@
   <string name="ExportFragment_error_while_writing_to_storage">Помилка при записі на накопичувач.</string>
   <string name="ExportFragment_export_successful">Експорт пройшов успішно.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Осточний збій зв\'язку LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal не зміг зареєструватись у сервісах Google Play. Дзвінки та повідомлення LibreSignal наразі відключені, спробуйте перереєструватися у Налаштування --&gt; Додатково</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Осточний збій зв\'язку LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal не зміг зареєструватись у сервісах Google Play. Дзвінки та повідомлення LibreSignal наразі відключені, спробуйте перереєструватися у Налаштування --&gt; Додатково</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Нова група</string>
   <string name="GroupCreateActivity_actionbar_update_title">Оновити групу</string>
@@ -550,7 +550,7 @@
   <string name="MessageNotifier_media_message">Медіа повідомлення</string>
   <string name="MessageNotifier_reply">Відповісти</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Швидка відповідь неможлива коли LibreSignal заблоковано!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Швидка відповідь неможлива коли LibreSignal заблоковано!</string>
   <string name="QuickResponseService_problem_sending_message">Проблема під час відправлення повідомлення!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>

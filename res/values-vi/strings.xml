@@ -205,8 +205,8 @@ chặn cuộc hội thoại của bạn hoặc chỉ đơn giản là %2$s đã 
   <string name="ExportFragment_error_unable_to_write_to_storage">Có lỗi, không thể chép vào ổ lưu trữ!</string>
   <string name="ExportFragment_error_while_writing_to_storage">Lỗi khi chép vào ổ lưu trữ!</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Lỗi thường trực khi giao tiếp qua LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal không thể đăng ký với Google Play Services. Cuộc gọi và tin nhắn LibreSignal đã ngừng hoạt động, hãy thử đăng ký lại từ mục Cài đặt &gt; Nâng cao.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Lỗi thường trực khi giao tiếp qua LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal không thể đăng ký với Google Play Services. Cuộc gọi và tin nhắn LibreSignal đã ngừng hoạt động, hãy thử đăng ký lại từ mục Cài đặt &gt; Nâng cao.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Tạo nhóm mới</string>
   <string name="GroupCreateActivity_actionbar_update_title">Cập nhật nhóm</string>
@@ -503,7 +503,7 @@ Nhận thông tin trao đổi chìa khóa về phiên bản giao thức không h
   <string name="MessageNotifier_media_message">Tin nhắn đa phương tiện</string>
   <string name="MessageNotifier_reply">Hồi âm</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Trả lời nhanh không khả thi khi LibreSignal bị khoá!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Trả lời nhanh không khả thi khi LibreSignal bị khoá!</string>
   <string name="QuickResponseService_problem_sending_message">Có vấn đề khi gửi tin nhắn!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -944,7 +944,7 @@ Các tin nhắn và cuộc gọi riêng tư miễn phí đến người dùng Li
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Phiên bản LibreSignal của bạn đã quá cũ</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="other">Phiên bản Signal của bạn sẽ hết hạn trong %d ngày. Chạm để cập nhật lên phiên bản mới nhất.</item>
+    <item quantity="other">Phiên bản LibreSignal của bạn sẽ hết hạn trong %d ngày. Chạm để cập nhật lên phiên bản mới nhất.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Phiên bản LibreSignal của bạn sẽ hết hạn vào hôm nay. Chạm để cập nhật lên phiên bản mới nhất.</string>
   <string name="reminder_header_expired_build">Phiên bản LibreSignal của bạn đã hết hạn!</string>

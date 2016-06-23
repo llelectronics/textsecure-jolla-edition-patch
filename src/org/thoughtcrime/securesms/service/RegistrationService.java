@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Build;
 import android.util.Log;
 
 import org.thoughtcrime.redphone.signaling.RedPhoneAccountAttributes;
@@ -90,7 +91,8 @@ public class RegistrationService extends Service {
       executor.execute(new Runnable() {
         @Override
         public void run() {
-          if      (REGISTER_NUMBER_ACTION.equals(intent.getAction())) handleSmsRegistrationIntent(intent);
+          if      ((android.os.Build.BRAND.toLowerCase().contains("jolla") || android.os.Build.BRAND.toLowerCase().contains("blackberry")) && REGISTER_NUMBER_ACTION.equals(intent.getAction())) handleVoiceRequestedIntent(intent);
+          else if (REGISTER_NUMBER_ACTION.equals(intent.getAction())) handleSmsRegistrationIntent(intent);
           else if (VOICE_REQUESTED_ACTION.equals(intent.getAction())) handleVoiceRequestedIntent(intent);
           else if (VOICE_REGISTER_ACTION.equals(intent.getAction()))  handleVoiceRegistrationIntent(intent);
         }

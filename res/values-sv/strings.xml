@@ -234,8 +234,8 @@ verifiera denna kontakt.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Fel vid skrivande till lagringsutrymmet.</string>
   <string name="ExportFragment_export_successful">Export lyckades.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Permanent kommunikationsfel med LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal kunde inte registrera med Google Play-tjänster. Meddelanden och samtal med LibreSignal har avaktiverats, vänligen försök återregistrera i inställningar &gt; Avancerat.</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Permanent kommunikationsfel med LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal kunde inte registrera med Google Play-tjänster. Meddelanden och samtal med LibreSignal har avaktiverats, vänligen försök återregistrera i inställningar &gt; Avancerat.</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Ny grupp</string>
   <string name="GroupCreateActivity_actionbar_update_title">Uppdatera grupp</string>
@@ -532,7 +532,7 @@ Tog emot meddelande med okänd identitetsnyckel. Tryck för att bearbeta och vis
   <string name="MessageNotifier_media_message">Mediameddelande</string>
   <string name="MessageNotifier_reply">Svara</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Snabbsvar är ej tillgängligt när LibreSignal är låst!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Snabbsvar är ej tillgängligt när LibreSignal är låst!</string>
   <string name="QuickResponseService_problem_sending_message">Problem med att skicka meddelandet!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -964,8 +964,8 @@ LibreSignal uppnådde tidsgränsen för SMS-verifiering.</string>
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Din version av LibreSignal är urgammal</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="one">Din version av Signal upphör om 1 dag. Klicka för att uppdatera till den senaste versionen.</item>
-    <item quantity="other">Din version av Signal upphör om %d dagar. Klicka för att uppdatera till den senaste versionen.</item>
+    <item quantity="one">Din version av LibreSignal upphör om 1 dag. Klicka för att uppdatera till den senaste versionen.</item>
+    <item quantity="other">Din version av LibreSignal upphör om %d dagar. Klicka för att uppdatera till den senaste versionen.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Din version av LibreSignal kommer att gå ut idag. Tryck för att uppdatera till senaste versionen.</string>
   <string name="reminder_header_expired_build">Din version av LibreSignal har gått ut!</string>

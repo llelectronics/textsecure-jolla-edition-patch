@@ -222,8 +222,8 @@ kontak ini.
   <string name="ExportFragment_error_unable_to_write_to_storage">Gagal, tidak bisa menyimpan ke penyimpanan.</string>
   <string name="ExportFragment_error_while_writing_to_storage">Gagal saat menyimpan ke penyimpanan.</string>
   <!--GcmRefreshJob-->
-  <string name="GcmRefreshJob_Permanent_Signal_communication_failure">Kegagalan permanen komunikasi LibreSignal!</string>
-  <string name="GcmRefreshJob_Signal_was_unable_to_register_with_Google_Play_Services">LibreSignal tidak dapat melakukan registrasi dengan Layanan Google Play. Fitur LibreSignal seperti pesan dan panggilan di nonaktifkan, mohon registrasi ulang melalui Pengaturan</string>
+  <string name="GcmRefreshJob_Permanent_LibreSignal_communication_failure">Kegagalan permanen komunikasi LibreSignal!</string>
+  <string name="GcmRefreshJob_LibreSignal_was_unable_to_register_with_Google_Play_Services">LibreSignal tidak dapat melakukan registrasi dengan Layanan Google Play. Fitur LibreSignal seperti pesan dan panggilan di nonaktifkan, mohon registrasi ulang melalui Pengaturan</string>
   <!--GroupCreateActivity-->
   <string name="GroupCreateActivity_actionbar_title">Grup baru</string>
   <string name="GroupCreateActivity_actionbar_update_title">Perbarui grup</string>
@@ -533,7 +533,7 @@ Diterima pesan pertukaran kunci untuk versi protokol yang tidak valid.
   <string name="MessageNotifier_media_message">Pesan media</string>
   <string name="MessageNotifier_reply">Balas</string>
   <!--QuickResponseService-->
-  <string name="QuickResponseService_quick_response_unavailable_when_Signal_is_locked">Tanggapan cepat tidak tersedia ketika LibreSignal sedang dikunci!</string>
+  <string name="QuickResponseService_quick_response_unavailable_when_LibreSignal_is_locked">Tanggapan cepat tidak tersedia ketika LibreSignal sedang dikunci!</string>
   <string name="QuickResponseService_problem_sending_message">Terjadi masalah saat mengirim pesan!</string>
   <!--SingleRecipientNotificationBuilder-->
   <string name="SingleRecipientNotificationBuilder_signal">LibreSignal</string>
@@ -984,7 +984,7 @@ gagal
   <!--reminder_header-->
   <string name="reminder_header_outdated_build">Versi LibreSignal Anda telah usang</string>
   <plurals name="reminder_header_outdated_build_details">
-    <item quantity="other">Versi Signal Anda akan berakhir dalam %d hari. Tekan untuk update versi terbaru.</item>
+    <item quantity="other">Versi LibreSignal Anda akan berakhir dalam %d hari. Tekan untuk update versi terbaru.</item>
   </plurals>
   <string name="reminder_header_outdated_build_details_today">Versi LibreSignal Anda akan berakhir hari ini. Tekan untuk update versi terbaru</string>
   <string name="reminder_header_expired_build">Versi LibreSignal Anda telah usang!</string>
