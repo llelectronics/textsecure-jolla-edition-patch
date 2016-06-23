@@ -1044,6 +1044,10 @@
     <string name="preferences_chats__message_trimming">Message trimming</string>
     <string name="preferences_advanced__use_system_emoji">Use system emoji</string>
     <string name="preferences_advanced__disable_signal_built_in_emoji_support">Disable LibreSignal\'s built-in emoji support</string>
+    <string name="preferences_privacy_custom_contact_directory">Send a custom contact list</string>
+    <string name="preferences_privacy_custom_contact_directory_summary">This increases privacy because the server will not know your contacts</string>
+    <string name="pref_custom_contact_directory_edit">Edit custom contact list</string>
+    <string name="pref_custom_contact_directory_edit_summary">Choose the contacts sent to the server</string>
 
     <!-- **************************************** -->
     <!-- menus -->
@@ -1202,6 +1206,14 @@
     <!-- transport_selection_list_item -->
     <string name="transport_selection_list_item__transport_icon">Transport icon</string>
 
+    <!-- setup question -->
+
+    <string name="setup_dialog_custom_contact_directory_title">Send a custom contact list to the server?</string>
+    <string name="setup_dialog_custom_contact_directory_message">
+        This increases privacy because the server will not know your contacts. You can
+        edit the custom contact list or disable it at the settings.</string>
+    <string name="setup_dialog_custom_contact_directory_yes">Yes</string>
+    <string name="setup_dialog_custom_contact_directory_no">No</string>
 
     <!-- EOF -->
 

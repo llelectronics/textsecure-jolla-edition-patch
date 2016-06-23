@@ -97,6 +97,9 @@ public class TextSecurePreferences {
   private static final String MULTI_DEVICE_PROVISIONED_PREF    = "pref_multi_device";
   public  static final String DIRECT_CAPTURE_CAMERA_ID         = "pref_direct_capture_camera_id";
 
+  private static final String CUSTOM_CONTACT_DIRECTORY         = "pref_custom_contact_directory";
+  private static final String CUSTOM_CONTACT_DIRECTORY_ASKED   = "pref_custom_contact_directory_asked";
+
   public static void setDirectCaptureCameraId(Context context, int value) {
     setIntegerPrefrence(context, DIRECT_CAPTURE_CAMERA_ID, value);
   }
@@ -522,6 +525,24 @@ public class TextSecurePreferences {
     return getStringSetPreference(context,
                                   key,
                                   new HashSet<>(Arrays.asList(context.getResources().getStringArray(defaultValuesRes))));
+  }
+
+  public static boolean isCustomContactDirectoryEnabled(Context context) {
+    // the default is true for better privacy
+    // the user will be asked once to disable it
+    return getBooleanPreference(context, CUSTOM_CONTACT_DIRECTORY, true);
+  }
+
+  public static void setCustomContactDirectoryEnabled(Context context, boolean enabled) {
+    setBooleanPreference(context, CUSTOM_CONTACT_DIRECTORY, enabled);
+  }
+
+  public static boolean hasAskedCustomContactDirectory(Context context) {
+    return getBooleanPreference(context, CUSTOM_CONTACT_DIRECTORY_ASKED, false);
+  }
+
+  public static void setHasAskedCustomContactDirectory(Context context, boolean hasAsked) {
+    setBooleanPreference(context, CUSTOM_CONTACT_DIRECTORY_ASKED, hasAsked);
   }
 
   public static void setBooleanPreference(Context context, String key, boolean value) {
