@@ -223,16 +223,21 @@ public class ConversationItem extends LinearLayout
     if (messageRecord.isOutgoing()) {
       bodyBubble.getBackground().setColorFilter(defaultBubbleColor, PorterDuff.Mode.MULTIPLY);
       mediaThumbnail.setBackgroundColorHint(defaultBubbleColor);
-
-      if (DynamicTheme.LIGHT.equals(TextSecurePreferences.getTheme(context))) {
-        audioView.setTint(conversationRecipients.getColor().toConversationColor(context));
-      } else {
-        audioView.setTint(Color.WHITE);
-      }
+      setAudioViewTint(messageRecord, conversationRecipients);
     } else {
       int color = recipient.getColor().toConversationColor(context);
       bodyBubble.getBackground().setColorFilter(color, PorterDuff.Mode.MULTIPLY);
       mediaThumbnail.setBackgroundColorHint(color);
+    }
+  }
+
+  private void setAudioViewTint(MessageRecord messageRecord, Recipients recipients) {
+    if (messageRecord.isOutgoing()) {
+      if (DynamicTheme.LIGHT.equals(TextSecurePreferences.getTheme(context))) {
+        audioView.setTint(recipients.getColor().toConversationColor(context));
+      } else {
+        audioView.setTint(Color.WHITE);
+      }
     }
   }
 
@@ -455,8 +460,13 @@ public class ConversationItem extends LinearLayout
   }
 
   @Override
-  public void onModified(Recipients recipient) {
-    onModified(recipient.getPrimaryRecipient());
+  public void onModified(final Recipients recipients) {
+    Util.runOnMain(new Runnable() {
+      @Override
+      public void run() {
+        setAudioViewTint(messageRecord, recipients);
+      }
+    });
   }
 
   private class AttachmentDownloadClickListener implements SlideClickListener {
