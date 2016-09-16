@@ -187,7 +187,8 @@ public class ConversationFragment extends Fragment
       MessageRecord messageRecord = messageRecords.iterator().next();
 
       menu.findItem(R.id.menu_context_resend).setVisible(messageRecord.isFailed());
-      menu.findItem(R.id.menu_context_save_attachment).setVisible(messageRecord.isMms()              &&
+      menu.findItem(R.id.menu_context_save_attachment).setVisible(!actionMessage                     &&
+                                                                  messageRecord.isMms()              &&
                                                                   !messageRecord.isMmsNotification() &&
                                                                   ((MediaMmsMessageRecord)messageRecord).containsMediaSlide());
 
